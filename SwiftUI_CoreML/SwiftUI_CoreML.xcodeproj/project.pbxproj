@@ -21,6 +21,7 @@
 		ED81A3472AFA840300E06E05 /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3432AFA840300E06E05 /* VNClassificationObservation+confidenceString.swift */; };
 		ED81A3482AFA840300E06E05 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3442AFA840300E06E05 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		ED81A3492AFA840300E06E05 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3452AFA840300E06E05 /* ImagePredictor.swift */; };
+		ED81A34B2AFA864600E06E05 /* ImageRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A34A2AFA864600E06E05 /* ImageRecognition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		ED81A3432AFA840300E06E05 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
 		ED81A3442AFA840300E06E05 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		ED81A3452AFA840300E06E05 /* ImagePredictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
+		ED81A34A2AFA864600E06E05 /* ImageRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				ED81A3412AFA840300E06E05 /* MobileNet.mlmodel */,
 				ED81A3422AFA840300E06E05 /* Extensions */,
 				ED81A3452AFA840300E06E05 /* ImagePredictor.swift */,
+				ED81A34A2AFA864600E06E05 /* ImageRecognition.swift */,
 			);
 			path = imageRecognition;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				ED81A3462AFA840300E06E05 /* MobileNet.mlmodel in Sources */,
 				ED81A3472AFA840300E06E05 /* VNClassificationObservation+confidenceString.swift in Sources */,
 				ED81A3482AFA840300E06E05 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
+				ED81A34B2AFA864600E06E05 /* ImageRecognition.swift in Sources */,
 				ED81A3102AFA4C2F00E06E05 /* SwiftUI_CoreMLApp.swift in Sources */,
 				ED81A33C2AFA612600E06E05 /* ImageDownloader.swift in Sources */,
 				ED81A3492AFA840300E06E05 /* ImagePredictor.swift in Sources */,

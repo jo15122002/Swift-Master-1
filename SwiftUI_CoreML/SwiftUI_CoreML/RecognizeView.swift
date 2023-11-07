@@ -14,10 +14,12 @@ struct RecognizeView: View {
     
     @State var urlString = ""
     @State var dataUrlString = ""
-    @State var urlList = ["https://cataas.com/cat", "https://dog.ceo/api/breeds/image/random"]
+    @State var urlList = ["https://cataas.com/cat", "https://picsum.photos/200/300"]
     
     @ObservedObject var downloader:ImageDownloader = ImageDownloader()
     @ObservedObject var dataDownloader:DataDownloader = DataDownloader()
+    
+    @ObservedObject var imageRecognition = ImageRecognition()
     
     var body: some View {
         VStack {
@@ -40,6 +42,12 @@ struct RecognizeView: View {
                 .scaledToFit() // Pour s'assurer que l'image soit à l'échelle
                 .frame(width: 200, height: 200) // La taille désirée de l'image
                 .padding() // Pour ajouter un peu d'espace autour de l'image
+                .onChange(of: downloader.image, perform: { value in
+                    if let image = value{
+                        self.imageRecognition.makePrediction(image: image)
+                    }
+                })
+            Text(self.imageRecognition.topPrediction)
                 
             // Titre sous l'image
             Text("Votre Titre")
