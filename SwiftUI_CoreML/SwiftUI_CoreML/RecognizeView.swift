@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct RecognizeView: View {
     // État pour le tableau des couleurs
@@ -13,13 +14,19 @@ struct RecognizeView: View {
     
     @State var urlString = ""
     
+    @ObservedObject var downloader:Downloader = Downloader()
+    
     var body: some View {
         VStack {
             TextField("URL:", text: $urlString).onSubmit {
                 print("Enter clicked")
+                print(urlString)
+                if !downloader.downloadImageAtUrl(urlString: urlString){
+                    print("show popup")
+                }
             }
             // Image centrée horizontalement
-            Image("maison") // Remplacez par le nom de votre image dans les Assets
+            Image(uiImage: downloader.image ?? UIImage()) // Remplacez par le nom de votre image dans les Assets
                 .resizable() // Pour permettre à l'image de changer de taille
                 .scaledToFit() // Pour s'assurer que l'image soit à l'échelle
                 .frame(width: 200, height: 200) // La taille désirée de l'image
