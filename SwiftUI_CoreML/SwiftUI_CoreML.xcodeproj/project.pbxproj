@@ -14,6 +14,7 @@
 		ED81A3212AFA4C3100E06E05 /* SwiftUI_CoreMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3202AFA4C3100E06E05 /* SwiftUI_CoreMLTests.swift */; };
 		ED81A32B2AFA4C3100E06E05 /* SwiftUI_CoreMLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A32A2AFA4C3100E06E05 /* SwiftUI_CoreMLUITests.swift */; };
 		ED81A32D2AFA4C3100E06E05 /* SwiftUI_CoreMLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A32C2AFA4C3100E06E05 /* SwiftUI_CoreMLUITestsLaunchTests.swift */; };
+		ED81A33A2AFA4E5C00E06E05 /* RecognizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3392AFA4E5C00E06E05 /* RecognizeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		ED81A3262AFA4C3100E06E05 /* SwiftUI_CoreMLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_CoreMLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED81A32A2AFA4C3100E06E05 /* SwiftUI_CoreMLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_CoreMLUITests.swift; sourceTree = "<group>"; };
 		ED81A32C2AFA4C3100E06E05 /* SwiftUI_CoreMLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_CoreMLUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED81A3392AFA4E5C00E06E05 /* RecognizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		ED81A30E2AFA4C2F00E06E05 /* SwiftUI_CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				ED81A3392AFA4E5C00E06E05 /* RecognizeView.swift */,
 				ED81A30F2AFA4C2F00E06E05 /* SwiftUI_CoreMLApp.swift */,
 				ED81A3112AFA4C2F00E06E05 /* ContentView.swift */,
 				ED81A3132AFA4C3100E06E05 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			files = (
 				ED81A3122AFA4C2F00E06E05 /* ContentView.swift in Sources */,
 				ED81A3102AFA4C2F00E06E05 /* SwiftUI_CoreMLApp.swift in Sources */,
+				ED81A33A2AFA4E5C00E06E05 /* RecognizeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
