@@ -13,17 +13,26 @@ struct RecognizeView: View {
     @State private var colors: [Color] = [.red, .green, .blue, .orange, .yellow, .purple, .pink]
     
     @State var urlString = ""
+    @State var dataUrlString = ""
+    @State var urlList = ["https://cataas.com/cat", "https://dog.ceo/api/breeds/image/random"]
     
-    @ObservedObject var downloader:Downloader = Downloader()
+    @ObservedObject var downloader:ImageDownloader = ImageDownloader()
+    @ObservedObject var dataDownloader:DataDownloader = DataDownloader()
     
     var body: some View {
         VStack {
+            List(urlList, id: \.self) { element in
+                Text(element).onTapGesture {
+                    self.downloadImageAtUrlString(urlString: element)
+                }
+            }
+            
+            
             TextField("URL:", text: $urlString).onSubmit {
                 print("Enter clicked")
                 print(urlString)
-                if !downloader.downloadImageAtUrl(urlString: urlString){
-                    print("show popup")
-                }
+                self.urlList.append(urlString)
+                //self.downloadImageAtUrlString(urlString: urlString)
             }
             // Image centrée horizontalement
             Image(uiImage: downloader.image ?? UIImage()) // Remplacez par le nom de votre image dans les Assets
@@ -61,6 +70,23 @@ struct RecognizeView: View {
                 }
                 .padding(.horizontal) // Ajoute de l'espace sur les côtés dans la ScrollView
             }
+            
+            VStack{
+                TextField("URL:", text: $dataUrlString).onSubmit {
+                    print("Enter clicked")
+                    print(dataUrlString)
+                    if (!dataDownloader.downloadDataAtUrl(urlString: dataUrlString)){
+                        print("show popup")
+                    }
+                }
+                //Text("\(dataDownloader.data?.count)")
+            }
+        }
+    }
+    
+    func downloadImageAtUrlString(urlString:String){
+        if !downloader.downloadImageAtUrl(urlString: urlString){
+            print("show popup")
         }
     }
 }

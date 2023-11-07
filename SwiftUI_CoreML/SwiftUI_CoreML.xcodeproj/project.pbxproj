@@ -15,7 +15,12 @@
 		ED81A32B2AFA4C3100E06E05 /* SwiftUI_CoreMLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A32A2AFA4C3100E06E05 /* SwiftUI_CoreMLUITests.swift */; };
 		ED81A32D2AFA4C3100E06E05 /* SwiftUI_CoreMLUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A32C2AFA4C3100E06E05 /* SwiftUI_CoreMLUITestsLaunchTests.swift */; };
 		ED81A33A2AFA4E5C00E06E05 /* RecognizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3392AFA4E5C00E06E05 /* RecognizeView.swift */; };
-		ED81A33C2AFA612600E06E05 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A33B2AFA612600E06E05 /* Downloader.swift */; };
+		ED81A33C2AFA612600E06E05 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A33B2AFA612600E06E05 /* ImageDownloader.swift */; };
+		ED81A33F2AFA75B700E06E05 /* DataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A33E2AFA75B700E06E05 /* DataDownloader.swift */; };
+		ED81A3462AFA840300E06E05 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3412AFA840300E06E05 /* MobileNet.mlmodel */; };
+		ED81A3472AFA840300E06E05 /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3432AFA840300E06E05 /* VNClassificationObservation+confidenceString.swift */; };
+		ED81A3482AFA840300E06E05 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3442AFA840300E06E05 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		ED81A3492AFA840300E06E05 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81A3452AFA840300E06E05 /* ImagePredictor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +52,13 @@
 		ED81A32A2AFA4C3100E06E05 /* SwiftUI_CoreMLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_CoreMLUITests.swift; sourceTree = "<group>"; };
 		ED81A32C2AFA4C3100E06E05 /* SwiftUI_CoreMLUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_CoreMLUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ED81A3392AFA4E5C00E06E05 /* RecognizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizeView.swift; sourceTree = "<group>"; };
-		ED81A33B2AFA612600E06E05 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		ED81A33B2AFA612600E06E05 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		ED81A33D2AFA6C7200E06E05 /* SwiftUI-CoreML-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-CoreML-Info.plist"; sourceTree = SOURCE_ROOT; };
+		ED81A33E2AFA75B700E06E05 /* DataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDownloader.swift; sourceTree = "<group>"; };
+		ED81A3412AFA840300E06E05 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		ED81A3432AFA840300E06E05 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
+		ED81A3442AFA840300E06E05 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		ED81A3452AFA840300E06E05 /* ImagePredictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +109,15 @@
 		ED81A30E2AFA4C2F00E06E05 /* SwiftUI_CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				ED81A3402AFA840300E06E05 /* imageRecognition */,
 				ED81A33D2AFA6C7200E06E05 /* SwiftUI-CoreML-Info.plist */,
 				ED81A3392AFA4E5C00E06E05 /* RecognizeView.swift */,
 				ED81A30F2AFA4C2F00E06E05 /* SwiftUI_CoreMLApp.swift */,
 				ED81A3112AFA4C2F00E06E05 /* ContentView.swift */,
 				ED81A3132AFA4C3100E06E05 /* Assets.xcassets */,
 				ED81A3152AFA4C3100E06E05 /* Preview Content */,
-				ED81A33B2AFA612600E06E05 /* Downloader.swift */,
+				ED81A33B2AFA612600E06E05 /* ImageDownloader.swift */,
+				ED81A33E2AFA75B700E06E05 /* DataDownloader.swift */,
 			);
 			path = SwiftUI_CoreML;
 			sourceTree = "<group>";
@@ -133,6 +145,25 @@
 				ED81A32C2AFA4C3100E06E05 /* SwiftUI_CoreMLUITestsLaunchTests.swift */,
 			);
 			path = SwiftUI_CoreMLUITests;
+			sourceTree = "<group>";
+		};
+		ED81A3402AFA840300E06E05 /* imageRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				ED81A3412AFA840300E06E05 /* MobileNet.mlmodel */,
+				ED81A3422AFA840300E06E05 /* Extensions */,
+				ED81A3452AFA840300E06E05 /* ImagePredictor.swift */,
+			);
+			path = imageRecognition;
+			sourceTree = "<group>";
+		};
+		ED81A3422AFA840300E06E05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED81A3432AFA840300E06E05 /* VNClassificationObservation+confidenceString.swift */,
+				ED81A3442AFA840300E06E05 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED81A3122AFA4C2F00E06E05 /* ContentView.swift in Sources */,
+				ED81A33F2AFA75B700E06E05 /* DataDownloader.swift in Sources */,
+				ED81A3462AFA840300E06E05 /* MobileNet.mlmodel in Sources */,
+				ED81A3472AFA840300E06E05 /* VNClassificationObservation+confidenceString.swift in Sources */,
+				ED81A3482AFA840300E06E05 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				ED81A3102AFA4C2F00E06E05 /* SwiftUI_CoreMLApp.swift in Sources */,
-				ED81A33C2AFA612600E06E05 /* Downloader.swift in Sources */,
+				ED81A33C2AFA612600E06E05 /* ImageDownloader.swift in Sources */,
+				ED81A3492AFA840300E06E05 /* ImagePredictor.swift in Sources */,
 				ED81A33A2AFA4E5C00E06E05 /* RecognizeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
