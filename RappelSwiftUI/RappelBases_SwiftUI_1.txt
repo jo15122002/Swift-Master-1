@@ -1,0 +1,24 @@
+SwiftUI:
+
+- Protocol APP:
+ -> Conformité pour le point d'entrée d'une APP SwiftUI
+ 
+- Protocol View:
+ -> Conformité pour une vue (un composant à ajouter dans l'arborescence des vues)
+ 
+Les variables/states:
+- Quand un élément n'est pas modifiable: on déclare une variable ou une constante "normal"
+
+- Quand un élément doit pouvoir être modifié: on déclare un @State devant le nom de la variable.
+
+- Quand une vue (un composant) doit modifier le contenu d'une variable, on lui donne une variable annoté avec @State.
+  -> ATTENTION: on donne au composant l'instance avec un "$" devant pour indiquer: "ce n'est pas une copie, c'est une source de vérité"
+  
+  
+- On peut écouter le changement de valeur d'une variable annotée @State:
+  -> on utilise le modificateur .onChange() sur la vue concernée. (le callback renvoie la nouvelle valeur)
+  
+
+
+
+
