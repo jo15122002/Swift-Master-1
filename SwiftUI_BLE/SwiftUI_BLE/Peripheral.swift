@@ -8,7 +8,7 @@
 import Foundation
 import CoreBluetooth
 
-struct Peripheral:Identifiable{
+struct Peripheral:Identifiable,Equatable{
     var id = UUID().uuidString
     var name:String
     var cbPeriph:CBPeripheral?
@@ -17,5 +17,13 @@ struct Peripheral:Identifiable{
 extension Peripheral{
     static func defaultPeripheral() -> Peripheral{
         return Peripheral(name: "Default")
+    }
+    
+    static func == (lhs:Self, rhs:Self)->Bool{
+        if let lperiph = lhs.cbPeriph,
+           let rperiph = rhs.cbPeriph{
+            return lperiph.identifier == rperiph.identifier
+        }
+        return false
     }
 }

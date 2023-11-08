@@ -13,8 +13,8 @@ struct PeripheralView: View {
     
     var body: some View {
         VStack{
-            Text(model.name)
-            Text(model.cbPeriph?.identifier.uuidString ?? "unknown")
+            Text(model.name).bold()
+            Text(model.cbPeriph?.identifier.uuidString ?? "unknown").fontWidth(.compressed)
         }
     }
 }

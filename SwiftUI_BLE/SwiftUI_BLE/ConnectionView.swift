@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ConnectionView: View {
     
-    @State var periphList = [Peripheral]()
+    @State var model:Connection = Connection()
     
     var body: some View {
         VStack {
@@ -19,10 +19,10 @@ struct ConnectionView: View {
             Text("Scan")
                 .onTapGesture(perform: {
                     BLEManager.instance.scan { periph, nom in
-                        periphList.append(Peripheral(name: nom, cbPeriph: periph))
+                        self.model.addPeripheral(periph: Peripheral(name: nom, cbPeriph: periph))
                     }
                 })
-            List($periphList){ periph in
+            List(self.$model.periphList){ periph in
                 PeripheralView(model: periph)
             }
         }
