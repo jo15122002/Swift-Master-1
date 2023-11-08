@@ -9,24 +9,45 @@ import SwiftUI
 
 struct ConnectionView: View {
     
-    @State var model:Connection = Connection()
+    @ObservedObject var model:Connection = Connection()
+    
+    @State var message:String = "";
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Scan")
-                .onTapGesture(perform: {
-                    BLEManager.instance.scan { periph, nom in
-                        self.model.addPeripheral(periph: Peripheral(name: nom, cbPeriph: periph))
+        
+            VStack {
+                HStack{
+                    Text(model.isConnected ? "Connected" : "Not connected")
+                    
+                    VStack{
+                        Image(systemName: "globe")
+                            .imageScale(.large)
+                            .foregroundStyle(.tint)
+                        Text("Scan")
+                            .onTapGesture(perform: {
+                                model.isScanning ? model.stopScan() : model.startScan()
+                            })
+                    }.padding()
+                    
+                    Text(model.isScanning ? "Scanning" : "Stopped")
+                }
+                
+                if(model.isConnected){
+                    TextField("Message to send", text: $message)
+                        .onSubmit {
+                            model.sendData(message: message)
+                        }
+                }else{
+                    List(self.$model.periphList){ periph in
+                        PeripheralView(model: periph)
+                            .onTapGesture {
+                                model.connectToPeripheral(periph: periph.wrappedValue)
+                            }
                     }
-                })
-            List(self.$model.periphList){ periph in
-                PeripheralView(model: periph)
+                }
+                
             }
-        }
-        .padding()
+            .padding()
     }
 }
 
