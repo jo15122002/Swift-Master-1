@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Connection:ObservableObject{
     @Published var periphList = [Peripheral]()
@@ -45,6 +46,15 @@ class Connection:ObservableObject{
         if let stringData = message.data(using: .utf8){
             var data = DataBytesManager.instance.appendPrefix(userId: 0x06, dataType: DataType.Text.rawValue, to: stringData)
             BLEManager.instance.sendData(data: data)
+        }
+    }
+    
+    func sendData(image:UIImage){
+        if let data = image.pngData(){
+            var data = DataBytesManager.instance.appendPrefix(userId: 0x06, dataType: DataType.Image.rawValue, to: data)
+            print("test")
+            BLEManager.instance.sendData(data: data)
+            print("test2")
         }
     }
     
