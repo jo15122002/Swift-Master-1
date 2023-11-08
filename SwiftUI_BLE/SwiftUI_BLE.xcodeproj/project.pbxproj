@@ -14,12 +14,7 @@
 		ED4246402AFB779F009586E8 /* SwiftUI_BLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED42463F2AFB779F009586E8 /* SwiftUI_BLETests.swift */; };
 		ED42464A2AFB779F009586E8 /* SwiftUI_BLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4246492AFB779F009586E8 /* SwiftUI_BLEUITests.swift */; };
 		ED42464C2AFB779F009586E8 /* SwiftUI_BLEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED42464B2AFB779F009586E8 /* SwiftUI_BLEUITestsLaunchTests.swift */; };
-		ED4246602AFB7D28009586E8 /* BLEConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4246592AFB7D28009586E8 /* BLEConnectionView.swift */; };
-		ED4246612AFB7D28009586E8 /* BLEManagerChat.zip in Resources */ = {isa = PBXBuildFile; fileRef = ED42465B2AFB7D28009586E8 /* BLEManagerChat.zip */; };
-		ED4246622AFB7D28009586E8 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED42465C2AFB7D28009586E8 /* BLEManager.swift */; };
-		ED4246632AFB7D28009586E8 /* BLEObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED42465D2AFB7D28009586E8 /* BLEObjectView.swift */; };
-		ED4246642AFB7D28009586E8 /* BLEObjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED42465E2AFB7D28009586E8 /* BLEObjectViewModel.swift */; };
-		ED4246652AFB7D28009586E8 /* BLEConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED42465F2AFB7D28009586E8 /* BLEConnectionViewModel.swift */; };
+		ED4246672AFB7D89009586E8 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4246662AFB7D89009586E8 /* BLEManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +45,7 @@
 		ED4246452AFB779F009586E8 /* SwiftUI_BLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_BLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4246492AFB779F009586E8 /* SwiftUI_BLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BLEUITests.swift; sourceTree = "<group>"; };
 		ED42464B2AFB779F009586E8 /* SwiftUI_BLEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BLEUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		ED4246592AFB7D28009586E8 /* BLEConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEConnectionView.swift; sourceTree = "<group>"; };
-		ED42465B2AFB7D28009586E8 /* BLEManagerChat.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = BLEManagerChat.zip; sourceTree = "<group>"; };
-		ED42465C2AFB7D28009586E8 /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
-		ED42465D2AFB7D28009586E8 /* BLEObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObjectView.swift; sourceTree = "<group>"; };
-		ED42465E2AFB7D28009586E8 /* BLEObjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEObjectViewModel.swift; sourceTree = "<group>"; };
-		ED42465F2AFB7D28009586E8 /* BLEConnectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEConnectionViewModel.swift; sourceTree = "<group>"; };
+		ED4246662AFB7D89009586E8 /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +96,7 @@
 		ED42462D2AFB779D009586E8 /* SwiftUI_BLE */ = {
 			isa = PBXGroup;
 			children = (
-				ED4246582AFB7D28009586E8 /* BLE */,
+				ED4246662AFB7D89009586E8 /* BLEManager.swift */,
 				ED42462E2AFB779D009586E8 /* SwiftUI_BLEApp.swift */,
 				ED4246302AFB779D009586E8 /* ContentView.swift */,
 				ED4246322AFB779F009586E8 /* Assets.xcassets */,
@@ -138,27 +128,6 @@
 				ED42464B2AFB779F009586E8 /* SwiftUI_BLEUITestsLaunchTests.swift */,
 			);
 			path = SwiftUI_BLEUITests;
-			sourceTree = "<group>";
-		};
-		ED4246582AFB7D28009586E8 /* BLE */ = {
-			isa = PBXGroup;
-			children = (
-				ED4246592AFB7D28009586E8 /* BLEConnectionView.swift */,
-				ED42465A2AFB7D28009586E8 /* Cell */,
-				ED42465F2AFB7D28009586E8 /* BLEConnectionViewModel.swift */,
-			);
-			path = BLE;
-			sourceTree = "<group>";
-		};
-		ED42465A2AFB7D28009586E8 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				ED42465B2AFB7D28009586E8 /* BLEManagerChat.zip */,
-				ED42465C2AFB7D28009586E8 /* BLEManager.swift */,
-				ED42465D2AFB7D28009586E8 /* BLEObjectView.swift */,
-				ED42465E2AFB7D28009586E8 /* BLEObjectViewModel.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +235,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4246362AFB779F009586E8 /* Preview Assets.xcassets in Resources */,
-				ED4246612AFB7D28009586E8 /* BLEManagerChat.zip in Resources */,
 				ED4246332AFB779F009586E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,12 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4246312AFB779D009586E8 /* ContentView.swift in Sources */,
-				ED4246642AFB7D28009586E8 /* BLEObjectViewModel.swift in Sources */,
-				ED4246622AFB7D28009586E8 /* BLEManager.swift in Sources */,
-				ED4246602AFB7D28009586E8 /* BLEConnectionView.swift in Sources */,
+				ED4246672AFB7D89009586E8 /* BLEManager.swift in Sources */,
 				ED42462F2AFB779D009586E8 /* SwiftUI_BLEApp.swift in Sources */,
-				ED4246632AFB7D28009586E8 /* BLEObjectView.swift in Sources */,
-				ED4246652AFB7D28009586E8 /* BLEConnectionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
