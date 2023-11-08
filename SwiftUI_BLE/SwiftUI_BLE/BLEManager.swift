@@ -88,7 +88,7 @@ class BLEManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         print("Discovered \(String(describing: peripheral.name))")
         
         discoveredPeripheral = peripheral
-        scanCallback?(peripheral,advertisementData[CBAdvertisementDataLocalNameKey] as! String)
+        scanCallback?(peripheral,advertisementData[CBAdvertisementDataLocalNameKey] as? String ?? "Uknown device")
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {

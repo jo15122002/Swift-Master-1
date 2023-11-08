@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUI_BLEApp: App {
+    
+    var ble = BLEManager.instance
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ConnectionView()
         }
     }
 }
