@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		ED245F742AFB9AA6001A7953 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED245F732AFB9AA6001A7953 /* Connection.swift */; };
+		ED245F762AFBC02A001A7953 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED245F752AFBC02A001A7953 /* Message.swift */; };
+		ED245F782AFBC083001A7953 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED245F772AFBC083001A7953 /* Utilities.swift */; };
+		ED245F7A2AFBC553001A7953 /* DataBytesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED245F792AFBC553001A7953 /* DataBytesManager.swift */; };
 		ED42462F2AFB779D009586E8 /* SwiftUI_BLEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED42462E2AFB779D009586E8 /* SwiftUI_BLEApp.swift */; };
 		ED4246312AFB779D009586E8 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4246302AFB779D009586E8 /* ConnectionView.swift */; };
 		ED4246332AFB779F009586E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4246322AFB779F009586E8 /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		ED245F732AFB9AA6001A7953 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		ED245F752AFBC02A001A7953 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ED245F772AFBC083001A7953 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		ED245F792AFBC553001A7953 /* DataBytesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBytesManager.swift; sourceTree = "<group>"; };
 		ED42462B2AFB779D009586E8 /* SwiftUI_BLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_BLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED42462E2AFB779D009586E8 /* SwiftUI_BLEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BLEApp.swift; sourceTree = "<group>"; };
 		ED4246302AFB779D009586E8 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
@@ -110,6 +116,9 @@
 				ED4246342AFB779F009586E8 /* Preview Content */,
 				ED4246682AFB9574009586E8 /* Peripheral.swift */,
 				ED245F732AFB9AA6001A7953 /* Connection.swift */,
+				ED245F752AFBC02A001A7953 /* Message.swift */,
+				ED245F772AFBC083001A7953 /* Utilities.swift */,
+				ED245F792AFBC553001A7953 /* DataBytesManager.swift */,
 			);
 			path = SwiftUI_BLE;
 			sourceTree = "<group>";
@@ -274,7 +283,10 @@
 				ED4246672AFB7D89009586E8 /* BLEManager.swift in Sources */,
 				ED42462F2AFB779D009586E8 /* SwiftUI_BLEApp.swift in Sources */,
 				ED42466B2AFB96A0009586E8 /* PeripheralView.swift in Sources */,
+				ED245F7A2AFBC553001A7953 /* DataBytesManager.swift in Sources */,
 				ED4246692AFB9574009586E8 /* Peripheral.swift in Sources */,
+				ED245F782AFBC083001A7953 /* Utilities.swift in Sources */,
+				ED245F762AFBC02A001A7953 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ class Connection:ObservableObject{
     @Published var periphList = [Peripheral]()
     @Published var isScanning = false
     @Published var isConnected = false
+    @Published var messagesReceived = [Message]()
     
     func addPeripheral(periph:Peripheral){
         if(!periphList.contains(periph)){
@@ -41,6 +42,20 @@ class Connection:ObservableObject{
     }
     
     func sendData(message:String){
-        BLEManager.instance.sendData(data: message.data(using: .utf8))
+        if let stringData = message.data(using: .utf8){
+            var data = DataBytesManager.instance.appendPrefix(userId: 0x06, dataType: DataType.Text.rawValue, to: stringData)
+            BLEManager.instance.sendData(data: data)
+        }
+    }
+    
+    func listenForMessage(){
+        BLEManager.instance.listenForMessages { data in
+            if let d = data{
+                if let infos = DataBytesManager.instance.convertToData(data: d){
+                    let message = Message(data: infos.data, dataType: infos.dataType, userName: infos.username)
+                    self.messagesReceived.append(message)
+                }
+            }
+        }
     }
 }
