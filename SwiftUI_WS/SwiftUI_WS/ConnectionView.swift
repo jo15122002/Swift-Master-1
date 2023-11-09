@@ -25,14 +25,14 @@ struct ConnectionView: View {
                     connection.disconnect()
                 }
             }
+            List(self.$connection.messageList){message in
+                MessageView(message: message.wrappedValue)
+            }
             TextField("Message to send", text: $message)
                 .disabled(!connection.isConnected)
                 .onSubmit {
                     self.connection.sendMessage(message: message)
                 }
-            List(self.$connection.messageList){message in
-                MessageView(message: message.wrappedValue)
-            }
         }
         .padding()
     }
