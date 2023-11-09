@@ -14,6 +14,8 @@
 		ED5F8D332AFCC89A0057787E /* SwiftUI_WSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D322AFCC89A0057787E /* SwiftUI_WSTests.swift */; };
 		ED5F8D3D2AFCC89A0057787E /* SwiftUI_WSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D3C2AFCC89A0057787E /* SwiftUI_WSUITests.swift */; };
 		ED5F8D3F2AFCC89A0057787E /* SwiftUI_WSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D3E2AFCC89A0057787E /* SwiftUI_WSUITestsLaunchTests.swift */; };
+		ED5F8D4D2AFCCA2C0057787E /* NWWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = ED5F8D4C2AFCCA2C0057787E /* NWWebSocket */; };
+		ED5F8D4F2AFCCA9F0057787E /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D4E2AFCCA9F0057787E /* WebSocketManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		ED5F8D382AFCC89A0057787E /* SwiftUI_WSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_WSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5F8D3C2AFCC89A0057787E /* SwiftUI_WSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WSUITests.swift; sourceTree = "<group>"; };
 		ED5F8D3E2AFCC89A0057787E /* SwiftUI_WSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED5F8D4E2AFCCA9F0057787E /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		ED5F8D502AFCCB650057787E /* SwiftUI-WS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-WS-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5F8D4D2AFCCA2C0057787E /* NWWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +99,12 @@
 		ED5F8D202AFCC8980057787E /* SwiftUI_WS */ = {
 			isa = PBXGroup;
 			children = (
+				ED5F8D502AFCCB650057787E /* SwiftUI-WS-Info.plist */,
 				ED5F8D212AFCC8980057787E /* SwiftUI_WSApp.swift */,
 				ED5F8D232AFCC8980057787E /* ContentView.swift */,
 				ED5F8D252AFCC89A0057787E /* Assets.xcassets */,
 				ED5F8D272AFCC89A0057787E /* Preview Content */,
+				ED5F8D4E2AFCCA9F0057787E /* WebSocketManager.swift */,
 			);
 			path = SwiftUI_WS;
 			sourceTree = "<group>";
@@ -143,6 +150,9 @@
 			dependencies = (
 			);
 			name = SwiftUI_WS;
+			packageProductDependencies = (
+				ED5F8D4C2AFCCA2C0057787E /* NWWebSocket */,
+			);
 			productName = SwiftUI_WS;
 			productReference = ED5F8D1E2AFCC8980057787E /* SwiftUI_WS.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +225,9 @@
 				Base,
 			);
 			mainGroup = ED5F8D152AFCC8980057787E;
+			packageReferences = (
+				ED5F8D4B2AFCCA2C0057787E /* XCRemoteSwiftPackageReference "NWWebSocket" */,
+			);
 			productRefGroup = ED5F8D1F2AFCC8980057787E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +272,7 @@
 			files = (
 				ED5F8D242AFCC8980057787E /* ContentView.swift in Sources */,
 				ED5F8D222AFCC8980057787E /* SwiftUI_WSApp.swift in Sources */,
+				ED5F8D4F2AFCCA9F0057787E /* WebSocketManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +439,8 @@
 				DEVELOPMENT_TEAM = 5X6JDKHZC6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-WS-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +470,8 @@
 				DEVELOPMENT_TEAM = 5X6JDKHZC6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-WS-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED5F8D4B2AFCCA2C0057787E /* XCRemoteSwiftPackageReference "NWWebSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pusher/NWWebSocket.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED5F8D4C2AFCCA2C0057787E /* NWWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED5F8D4B2AFCCA2C0057787E /* XCRemoteSwiftPackageReference "NWWebSocket" */;
+			productName = NWWebSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED5F8D162AFCC8980057787E /* Project object */;
 }
