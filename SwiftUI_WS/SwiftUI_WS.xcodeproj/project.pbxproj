@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED5F8D222AFCC8980057787E /* SwiftUI_WSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D212AFCC8980057787E /* SwiftUI_WSApp.swift */; };
-		ED5F8D242AFCC8980057787E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D232AFCC8980057787E /* ContentView.swift */; };
+		ED5F8D242AFCC8980057787E /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D232AFCC8980057787E /* ConnectionView.swift */; };
 		ED5F8D262AFCC89A0057787E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5F8D252AFCC89A0057787E /* Assets.xcassets */; };
 		ED5F8D292AFCC89A0057787E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5F8D282AFCC89A0057787E /* Preview Assets.xcassets */; };
 		ED5F8D332AFCC89A0057787E /* SwiftUI_WSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D322AFCC89A0057787E /* SwiftUI_WSTests.swift */; };
@@ -16,6 +16,10 @@
 		ED5F8D3F2AFCC89A0057787E /* SwiftUI_WSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D3E2AFCC89A0057787E /* SwiftUI_WSUITestsLaunchTests.swift */; };
 		ED5F8D4D2AFCCA2C0057787E /* NWWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = ED5F8D4C2AFCCA2C0057787E /* NWWebSocket */; };
 		ED5F8D4F2AFCCA9F0057787E /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F8D4E2AFCCA9F0057787E /* WebSocketManager.swift */; };
+		ED67E27B2AFCE6E3003F32BB /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67E27A2AFCE6E3003F32BB /* Connection.swift */; };
+		ED67E27F2AFCE94E003F32BB /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67E27E2AFCE94E003F32BB /* MessageView.swift */; };
+		ED67E2822AFD0B10003F32BB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67E2802AFD0B10003F32BB /* Utilities.swift */; };
+		ED67E2832AFD0B10003F32BB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67E2812AFD0B10003F32BB /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 /* Begin PBXFileReference section */
 		ED5F8D1E2AFCC8980057787E /* SwiftUI_WS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_WS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5F8D212AFCC8980057787E /* SwiftUI_WSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WSApp.swift; sourceTree = "<group>"; };
-		ED5F8D232AFCC8980057787E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ED5F8D232AFCC8980057787E /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
 		ED5F8D252AFCC89A0057787E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED5F8D282AFCC89A0057787E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED5F8D2E2AFCC89A0057787E /* SwiftUI_WSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_WSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +52,10 @@
 		ED5F8D3E2AFCC89A0057787E /* SwiftUI_WSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ED5F8D4E2AFCCA9F0057787E /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
 		ED5F8D502AFCCB650057787E /* SwiftUI-WS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-WS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		ED67E27A2AFCE6E3003F32BB /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		ED67E27E2AFCE94E003F32BB /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		ED67E2802AFD0B10003F32BB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../../SwiftUI_BLE/SwiftUI_BLE/Utilities.swift; sourceTree = "<group>"; };
+		ED67E2812AFD0B10003F32BB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../../SwiftUI_BLE/SwiftUI_BLE/Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +107,16 @@
 		ED5F8D202AFCC8980057787E /* SwiftUI_WS */ = {
 			isa = PBXGroup;
 			children = (
+				ED67E2812AFD0B10003F32BB /* Message.swift */,
+				ED67E2802AFD0B10003F32BB /* Utilities.swift */,
 				ED5F8D502AFCCB650057787E /* SwiftUI-WS-Info.plist */,
 				ED5F8D212AFCC8980057787E /* SwiftUI_WSApp.swift */,
-				ED5F8D232AFCC8980057787E /* ContentView.swift */,
+				ED5F8D232AFCC8980057787E /* ConnectionView.swift */,
 				ED5F8D252AFCC89A0057787E /* Assets.xcassets */,
 				ED5F8D272AFCC89A0057787E /* Preview Content */,
 				ED5F8D4E2AFCCA9F0057787E /* WebSocketManager.swift */,
+				ED67E27A2AFCE6E3003F32BB /* Connection.swift */,
+				ED67E27E2AFCE94E003F32BB /* MessageView.swift */,
 			);
 			path = SwiftUI_WS;
 			sourceTree = "<group>";
@@ -270,9 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED5F8D242AFCC8980057787E /* ContentView.swift in Sources */,
+				ED67E2822AFD0B10003F32BB /* Utilities.swift in Sources */,
+				ED67E27F2AFCE94E003F32BB /* MessageView.swift in Sources */,
+				ED5F8D242AFCC8980057787E /* ConnectionView.swift in Sources */,
 				ED5F8D222AFCC8980057787E /* SwiftUI_WSApp.swift in Sources */,
 				ED5F8D4F2AFCCA9F0057787E /* WebSocketManager.swift in Sources */,
+				ED67E27B2AFCE6E3003F32BB /* Connection.swift in Sources */,
+				ED67E2832AFD0B10003F32BB /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +462,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,6 +494,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

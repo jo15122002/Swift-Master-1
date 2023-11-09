@@ -35,6 +35,10 @@ extension Message {
         }
         return nil
     }
+    
+    static func defaultMessage()->Message{
+        return Message(data: "Un message super cool".data(using: .utf8), dataType: DataType.Text, userName: "Jojo")
+    }
 }
 
 

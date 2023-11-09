@@ -38,19 +38,18 @@ class WebSocketManager : WebSocketConnectionDelegate{
     
     func webSocketDidReceiveMessage(connection: WebSocketConnection, string: String) {
         print("message: " + string)
+        self.messageReceivedCallback(string)
     }
     
     func webSocketDidReceiveMessage(connection: WebSocketConnection, data: Data) {
         print("received data message")
     }
     
-    
-    static let instance = WebSocketManager()
-    
     private var socket:NWWebSocket?
     
     private var connectedCallback:()->() = {}
     private var disconnectedCallback:()->() = {}
+    private var messageReceivedCallback:(String)->() = {_ in }
     
     func connectToUrl(url:String, intervalPing:Bool = false, callback:@escaping (()->()) = {}){
         if let socketURL = URL(string: url){
@@ -79,6 +78,10 @@ class WebSocketManager : WebSocketConnectionDelegate{
     func sendData(data:Data, callback:@escaping (()->()) = {}){
         self.socket?.send(data: data)
         callback()
+    }
+    
+    func setMessageReceivedCallback(callback:@escaping ((String)->())){
+        self.messageReceivedCallback = callback
     }
     
 }

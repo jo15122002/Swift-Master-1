@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_WSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ConnectionView()
         }
     }
 }
