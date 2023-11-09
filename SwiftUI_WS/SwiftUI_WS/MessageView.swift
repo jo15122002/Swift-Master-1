@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct MessageView: View {
     var message:Message
@@ -16,7 +17,15 @@ struct MessageView: View {
             }
             VStack{
                 Text(message.userName)
-                Text(message.getText()!)
+                if(message.dataType == .Text){
+                    Text(message.getText()!)
+                }else{
+                    Image(uiImage: message.getImage()!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: .infinity)
+                        .clipped()
+                }
             }
         }
     }

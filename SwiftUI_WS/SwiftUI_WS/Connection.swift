@@ -19,6 +19,7 @@ class Connection:ObservableObject{
         self.webSocketManager.connectToUrl(url: url){
             self.isConnected = true
             self.listenForMessages()
+            self.listenForImages()
             callback()
         }
     }
@@ -26,6 +27,8 @@ class Connection:ObservableObject{
     func disconnect(){
         self.webSocketManager.disconnect(){
             self.isConnected = false
+            self.stopListenForImages()
+            self.stopListenForMessages()
         }
     }
     
@@ -39,7 +42,10 @@ class Connection:ObservableObject{
     
     func sendMessage(data:Data){
         if(self.isConnected){
-            self.webSocketManager.sendData(data: data)
+            self.webSocketManager.sendData(data: data){
+                print("image sent")
+                self.addMessage(message: Message(data: data, dataType: .Image, userName: "Jojo"))
+            }
         }
     }
     
@@ -55,6 +61,18 @@ class Connection:ObservableObject{
     
     func stopListenForMessages(){
         self.webSocketManager.setMessageReceivedCallback { message in
+            
+        }
+    }
+    
+    func listenForImages(){
+        self.webSocketManager.setImageReceivedCallback(callback: {image in
+            self.addMessage(message: Message(data: image.pngData(), dataType: DataType.Image, userName: "Uknown"))
+        })
+    }
+    
+    func stopListenForImages(){
+        self.webSocketManager.setImageReceivedCallback { image in
             
         }
     }

@@ -8,6 +8,7 @@
 import Foundation
 import NWWebSocket
 import Network
+import UIKit
 
 class WebSocketManager : WebSocketConnectionDelegate{
     func webSocketDidConnect(connection: WebSocketConnection) {
@@ -43,6 +44,9 @@ class WebSocketManager : WebSocketConnectionDelegate{
     
     func webSocketDidReceiveMessage(connection: WebSocketConnection, data: Data) {
         print("received data message")
+        if let image = UIImage(data: data){
+            self.imageReceivedCallback(image)
+        }
     }
     
     private var socket:NWWebSocket?
@@ -50,6 +54,7 @@ class WebSocketManager : WebSocketConnectionDelegate{
     private var connectedCallback:()->() = {}
     private var disconnectedCallback:()->() = {}
     private var messageReceivedCallback:(String)->() = {_ in }
+    private var imageReceivedCallback:(UIImage)->() = {_ in}
     
     func connectToUrl(url:String, intervalPing:Bool = false, callback:@escaping (()->()) = {}){
         if let socketURL = URL(string: url){
@@ -82,6 +87,10 @@ class WebSocketManager : WebSocketConnectionDelegate{
     
     func setMessageReceivedCallback(callback:@escaping ((String)->())){
         self.messageReceivedCallback = callback
+    }
+    
+    func setImageReceivedCallback(callback: @escaping ((UIImage)->())){
+        self.imageReceivedCallback = callback
     }
     
 }

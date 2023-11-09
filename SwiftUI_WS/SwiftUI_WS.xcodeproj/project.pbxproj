@@ -20,6 +20,7 @@
 		ED67E27F2AFCE94E003F32BB /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67E27E2AFCE94E003F32BB /* MessageView.swift */; };
 		ED67E2822AFD0B10003F32BB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67E2802AFD0B10003F32BB /* Utilities.swift */; };
 		ED67E2832AFD0B10003F32BB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67E2812AFD0B10003F32BB /* Message.swift */; };
+		ED67E2852AFD160D003F32BB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED67E2842AFD160D003F32BB /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		ED67E27E2AFCE94E003F32BB /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		ED67E2802AFD0B10003F32BB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../../SwiftUI_BLE/SwiftUI_BLE/Utilities.swift; sourceTree = "<group>"; };
 		ED67E2812AFD0B10003F32BB /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = ../../SwiftUI_BLE/SwiftUI_BLE/Message.swift; sourceTree = "<group>"; };
+		ED67E2842AFD160D003F32BB /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = ../../SwiftUI_BLE/SwiftUI_BLE/ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		ED5F8D202AFCC8980057787E /* SwiftUI_WS */ = {
 			isa = PBXGroup;
 			children = (
+				ED67E2842AFD160D003F32BB /* ImagePicker.swift */,
 				ED67E2812AFD0B10003F32BB /* Message.swift */,
 				ED67E2802AFD0B10003F32BB /* Utilities.swift */,
 				ED5F8D502AFCCB650057787E /* SwiftUI-WS-Info.plist */,
@@ -287,6 +290,7 @@
 				ED5F8D242AFCC8980057787E /* ConnectionView.swift in Sources */,
 				ED5F8D222AFCC8980057787E /* SwiftUI_WSApp.swift in Sources */,
 				ED5F8D4F2AFCCA9F0057787E /* WebSocketManager.swift in Sources */,
+				ED67E2852AFD160D003F32BB /* ImagePicker.swift in Sources */,
 				ED67E27B2AFCE6E3003F32BB /* Connection.swift in Sources */,
 				ED67E2832AFD0B10003F32BB /* Message.swift in Sources */,
 			);
