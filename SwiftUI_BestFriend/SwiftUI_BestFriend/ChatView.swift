@@ -18,6 +18,7 @@ struct ChatView: View {
         TextField("Message to send…", text: $message)
             .onSubmit {
                 self.chatObservable.sendChat(message: message)
+                self.message = ""
             }.padding()
     }
 }
