@@ -10,8 +10,9 @@ import Foundation
 
 class APIService {
     let baseURL = "http://192.168.4.136:8080" // Remplacez cela par l'URL réelle de votre API
+    let setting = Settings.instance
 
-    func sendCompletionRequest(prompt: String, temperature: Double = 0.8, topK: Int = 40, topP: Double = 0.95, minP: Double = 0.05, nPredict: Int = 32, nKeep: Int = 0, stream: Bool = false, stop: [String] = [], tfsZ: Double = 1.0, typicalP: Double = 1.0, repeatPenalty: Double = 1.1, repeatLastN: Int = 64, penalizeNL: Bool = true, presencePenalty: Double = 0.0, frequencyPenalty: Double = 0.0, mirostat: Int = 0, mirostatTau: Double = 5.0, mirostatEta: Double = 0.1, grammar: String = "", seed: Int = -1, ignoreEOS: Bool = false, logitBias: [[Any]] = [], nProbs: Int = 0, imageData: [[String: Any]] = [], onSuccess:(@escaping (String)->()) = {_ in}) {
+    func sendCompletionRequest(prompt: String, temperature: Double = 0.8, topK: Int = 40, topP: Double = 0.95, minP: Double = 0.05, nPredict: Int = Int(Settings.instance.predictions), nKeep: Int = 0, stream: Bool = false, stop: [String] = ["\(Settings.instance.username):"], tfsZ: Double = 1.0, typicalP: Double = 1.0, repeatPenalty: Double = 1.1, repeatLastN: Int = 64, penalizeNL: Bool = true, presencePenalty: Double = 0.0, frequencyPenalty: Double = 0.0, mirostat: Int = 0, mirostatTau: Double = 5.0, mirostatEta: Double = 0.1, grammar: String = "", seed: Int = -1, ignoreEOS: Bool = false, logitBias: [[Any]] = [], nProbs: Int = 0, imageData: [[String: Any]] = [], onSuccess:(@escaping (String)->()) = {_ in}) {
         
         let endpoint = "/completion"
         let urlString = baseURL + endpoint
@@ -24,7 +25,7 @@ class APIService {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
+        
         let parameters: [String: Any] = [
             "prompt": prompt,
             "temperature": temperature,
@@ -86,7 +87,3 @@ class APIService {
         task.resume()
     }
 }
-
-// Utilisation de la classe
-//let completionRequest = CompletionRequest()
-//completionRequest.sendCompletionRequest(prompt: "Your prompt here")
