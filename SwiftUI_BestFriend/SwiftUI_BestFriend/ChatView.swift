@@ -34,7 +34,9 @@ struct ChatView: View {
                     .onSubmit {
                         self.chatObservable.sendChat(message: message)
                         self.message = ""
-                    }.padding()
+                    }
+                    .padding()
+                
                 Image("gear")
                     .resizable()
                     .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
