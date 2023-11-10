@@ -14,6 +14,7 @@
 		EDE820062AFE19B30099DCD0 /* SwiftUI_BestFriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820052AFE19B30099DCD0 /* SwiftUI_BestFriendTests.swift */; };
 		EDE820102AFE19B30099DCD0 /* SwiftUI_BestFriendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE8200F2AFE19B30099DCD0 /* SwiftUI_BestFriendUITests.swift */; };
 		EDE820122AFE19B30099DCD0 /* SwiftUI_BestFriendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820112AFE19B30099DCD0 /* SwiftUI_BestFriendUITestsLaunchTests.swift */; };
+		EDE820212AFE1F8F0099DCD0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820202AFE1F8F0099DCD0 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		EDE8200B2AFE19B30099DCD0 /* SwiftUI_BestFriendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_BestFriendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE8200F2AFE19B30099DCD0 /* SwiftUI_BestFriendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BestFriendUITests.swift; sourceTree = "<group>"; };
 		EDE820112AFE19B30099DCD0 /* SwiftUI_BestFriendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BestFriendUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDE820202AFE1F8F0099DCD0 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		EDE81FF32AFE19B10099DCD0 /* SwiftUI_BestFriend */ = {
 			isa = PBXGroup;
 			children = (
+				EDE820202AFE1F8F0099DCD0 /* APIService.swift */,
 				EDE81FF42AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift */,
 				EDE81FF62AFE19B10099DCD0 /* ContentView.swift */,
 				EDE81FF82AFE19B20099DCD0 /* Assets.xcassets */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE81FF72AFE19B10099DCD0 /* ContentView.swift in Sources */,
+				EDE820212AFE1F8F0099DCD0 /* APIService.swift in Sources */,
 				EDE81FF52AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
