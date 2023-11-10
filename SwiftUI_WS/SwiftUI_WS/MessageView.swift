@@ -35,3 +35,4 @@ struct MessageView: View {
     let message = Message.defaultMessage()
     return MessageView(message: message)
 }
+

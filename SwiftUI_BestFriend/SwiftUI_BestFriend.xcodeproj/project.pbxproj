@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		EDE81FF52AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE81FF42AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift */; };
-		EDE81FF72AFE19B10099DCD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE81FF62AFE19B10099DCD0 /* ContentView.swift */; };
+		EDE81FF72AFE19B10099DCD0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE81FF62AFE19B10099DCD0 /* ChatView.swift */; };
 		EDE81FF92AFE19B20099DCD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE81FF82AFE19B20099DCD0 /* Assets.xcassets */; };
 		EDE81FFC2AFE19B20099DCD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE81FFB2AFE19B20099DCD0 /* Preview Assets.xcassets */; };
 		EDE820062AFE19B30099DCD0 /* SwiftUI_BestFriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820052AFE19B30099DCD0 /* SwiftUI_BestFriendTests.swift */; };
 		EDE820102AFE19B30099DCD0 /* SwiftUI_BestFriendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE8200F2AFE19B30099DCD0 /* SwiftUI_BestFriendUITests.swift */; };
 		EDE820122AFE19B30099DCD0 /* SwiftUI_BestFriendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820112AFE19B30099DCD0 /* SwiftUI_BestFriendUITestsLaunchTests.swift */; };
 		EDE820212AFE1F8F0099DCD0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820202AFE1F8F0099DCD0 /* APIService.swift */; };
+		EDE820242AFE38960099DCD0 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820232AFE38960099DCD0 /* APIResponse.swift */; };
+		EDE820262AFE3C8D0099DCD0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820252AFE3C8D0099DCD0 /* Message.swift */; };
+		EDE820282AFE3CB80099DCD0 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820272AFE3CB80099DCD0 /* Utilities.swift */; };
+		EDE8202A2AFE3D650099DCD0 /* ChatObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE820292AFE3D650099DCD0 /* ChatObservable.swift */; };
+		EDE8202E2AFE3D9F0099DCD0 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE8202D2AFE3D9F0099DCD0 /* MessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,7 @@
 /* Begin PBXFileReference section */
 		EDE81FF12AFE19B10099DCD0 /* SwiftUI_BestFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_BestFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE81FF42AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BestFriendApp.swift; sourceTree = "<group>"; };
-		EDE81FF62AFE19B10099DCD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDE81FF62AFE19B10099DCD0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		EDE81FF82AFE19B20099DCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDE81FFB2AFE19B20099DCD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDE820012AFE19B30099DCD0 /* SwiftUI_BestFriendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_BestFriendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +51,12 @@
 		EDE8200F2AFE19B30099DCD0 /* SwiftUI_BestFriendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BestFriendUITests.swift; sourceTree = "<group>"; };
 		EDE820112AFE19B30099DCD0 /* SwiftUI_BestFriendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BestFriendUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EDE820202AFE1F8F0099DCD0 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		EDE820222AFE2A090099DCD0 /* SwiftUI-BestFriend-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-BestFriend-Info.plist"; sourceTree = SOURCE_ROOT; };
+		EDE820232AFE38960099DCD0 /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		EDE820252AFE3C8D0099DCD0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		EDE820272AFE3CB80099DCD0 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../../SwiftUI_BLE/SwiftUI_BLE/Utilities.swift; sourceTree = "<group>"; };
+		EDE820292AFE3D650099DCD0 /* ChatObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatObservable.swift; sourceTree = "<group>"; };
+		EDE8202D2AFE3D9F0099DCD0 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +107,17 @@
 		EDE81FF32AFE19B10099DCD0 /* SwiftUI_BestFriend */ = {
 			isa = PBXGroup;
 			children = (
+				EDE820272AFE3CB80099DCD0 /* Utilities.swift */,
+				EDE820252AFE3C8D0099DCD0 /* Message.swift */,
+				EDE820232AFE38960099DCD0 /* APIResponse.swift */,
+				EDE820222AFE2A090099DCD0 /* SwiftUI-BestFriend-Info.plist */,
 				EDE820202AFE1F8F0099DCD0 /* APIService.swift */,
 				EDE81FF42AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift */,
-				EDE81FF62AFE19B10099DCD0 /* ContentView.swift */,
+				EDE81FF62AFE19B10099DCD0 /* ChatView.swift */,
 				EDE81FF82AFE19B20099DCD0 /* Assets.xcassets */,
 				EDE81FFA2AFE19B20099DCD0 /* Preview Content */,
+				EDE820292AFE3D650099DCD0 /* ChatObservable.swift */,
+				EDE8202D2AFE3D9F0099DCD0 /* MessageView.swift */,
 			);
 			path = SwiftUI_BestFriend;
 			sourceTree = "<group>";
@@ -260,7 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE81FF72AFE19B10099DCD0 /* ContentView.swift in Sources */,
+				EDE820282AFE3CB80099DCD0 /* Utilities.swift in Sources */,
+				EDE81FF72AFE19B10099DCD0 /* ChatView.swift in Sources */,
+				EDE820242AFE38960099DCD0 /* APIResponse.swift in Sources */,
+				EDE8202A2AFE3D650099DCD0 /* ChatObservable.swift in Sources */,
+				EDE8202E2AFE3D9F0099DCD0 /* MessageView.swift in Sources */,
+				EDE820262AFE3C8D0099DCD0 /* Message.swift in Sources */,
 				EDE820212AFE1F8F0099DCD0 /* APIService.swift in Sources */,
 				EDE81FF52AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift in Sources */,
 			);
@@ -429,6 +451,7 @@
 				DEVELOPMENT_TEAM = 5X6JDKHZC6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-BestFriend-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -458,6 +481,7 @@
 				DEVELOPMENT_TEAM = 5X6JDKHZC6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-BestFriend-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

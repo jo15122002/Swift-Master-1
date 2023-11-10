@@ -8,10 +8,10 @@
 import Foundation
 
 
-class CompletionRequest {
-    let baseURL = "YOUR_API_BASE_URL" // Remplacez cela par l'URL réelle de votre API
+class APIService {
+    let baseURL = "http://192.168.4.136:8080" // Remplacez cela par l'URL réelle de votre API
 
-    func sendCompletionRequest(prompt: String, temperature: Double = 0.8, topK: Int = 40, topP: Double = 0.95, minP: Double = 0.05, nPredict: Int = -1, nKeep: Int = 0, stream: Bool = false, stop: [String] = [], tfsZ: Double = 1.0, typicalP: Double = 1.0, repeatPenalty: Double = 1.1, repeatLastN: Int = 64, penalizeNL: Bool = true, presencePenalty: Double = 0.0, frequencyPenalty: Double = 0.0, mirostat: Int = 0, mirostatTau: Double = 5.0, mirostatEta: Double = 0.1, grammar: String = "", seed: Int = -1, ignoreEOS: Bool = false, logitBias: [[Any]] = [], nProbs: Int = 0, imageData: [[String: Any]] = []) {
+    func sendCompletionRequest(prompt: String, temperature: Double = 0.8, topK: Int = 40, topP: Double = 0.95, minP: Double = 0.05, nPredict: Int = 32, nKeep: Int = 0, stream: Bool = false, stop: [String] = [], tfsZ: Double = 1.0, typicalP: Double = 1.0, repeatPenalty: Double = 1.1, repeatLastN: Int = 64, penalizeNL: Bool = true, presencePenalty: Double = 0.0, frequencyPenalty: Double = 0.0, mirostat: Int = 0, mirostatTau: Double = 5.0, mirostatEta: Double = 0.1, grammar: String = "", seed: Int = -1, ignoreEOS: Bool = false, logitBias: [[Any]] = [], nProbs: Int = 0, imageData: [[String: Any]] = [], onSuccess:(@escaping (String)->()) = {_ in}) {
         
         let endpoint = "/completion"
         let urlString = baseURL + endpoint
@@ -73,8 +73,10 @@ class CompletionRequest {
             }
 
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print("Response JSON: \(json)")
+                let apiResponse = try JSONDecoder().decode(APIResponse.self, from: data)
+                //let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print("Response JSON: \(apiResponse)")
+                onSuccess(apiResponse.content)
                 // Handle the JSON response here
             } catch {
                 print("Error decoding JSON: \(error)")

@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_BestFriendApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChatView()
         }
     }
 }
