@@ -13,12 +13,11 @@ class ChatObservable:ObservableObject{
     @Published var messageList = [Message]()
     
     func sendChat(message:String){
-        print(Settings.instance.username)
-        print(Settings.instance.botname)
-        self.addMessage(message: Message(message: message, username: Settings.instance.username))
+        
+        self.addMessage(message: Message(data: message.data(using: .utf8), dataType: .Text, userName: Settings.instance.username))
         self.apiService.sendCompletionRequest(prompt: self.buildMessage(newMessage: message)) { content in
             let formattedContent = content.replacingOccurrences(of: "\(Settings.instance.botname):", with: "")
-            self.addMessage(message: Message(message: formattedContent, username: Settings.instance.botname))
+            self.addMessage(message: Message(data: formattedContent.data(using: .utf8), dataType: .Text, userName: Settings.instance.botname))
         }
     }
     
@@ -32,7 +31,7 @@ class ChatObservable:ObservableObject{
         var formattedPrompt = "\(Settings.instance.getFormattedContextPrompt())\n"
         
         messageList.forEach{message in
-            formattedPrompt += "\(message.username): \(message.message)\n"
+            formattedPrompt += "\(message.userName): \(message.getText())\n"
         }
         
         formattedPrompt += "\(Settings.instance.username): \(newMessage)"

@@ -11,12 +11,12 @@ struct MessageView: View {
     var message:Message
     var body: some View {
         HStack{
-            if message.username.elementsEqual("Jojo"){
+            if message.userName.elementsEqual("Jojo"){
                 Spacer()
             }
             VStack{
-                Text(message.username)
-                Text(message.message)
+                Text(message.userName)
+                Text(message.getText()!)
             }
         }
     }

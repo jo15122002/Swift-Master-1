@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED73B6F62AFE575000358C04 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73B6F52AFE575000358C04 /* Settings.swift */; };
 		ED73B6F82AFE766A00358C04 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73B6F72AFE766A00358C04 /* ImagePicker.swift */; };
+		ED73B6FE2AFE7A5500358C04 /* ApiServiceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73B6FD2AFE7A5500358C04 /* ApiServiceImage.swift */; };
 		EDE81FF52AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE81FF42AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift */; };
 		EDE81FF72AFE19B10099DCD0 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE81FF62AFE19B10099DCD0 /* ChatView.swift */; };
 		EDE81FF92AFE19B20099DCD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE81FF82AFE19B20099DCD0 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		ED73B6F52AFE575000358C04 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		ED73B6F72AFE766A00358C04 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = ../../SwiftUI_BLE/SwiftUI_BLE/ImagePicker.swift; sourceTree = "<group>"; };
+		ED73B6FD2AFE7A5500358C04 /* ApiServiceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImage.swift; sourceTree = "<group>"; };
 		EDE81FF12AFE19B10099DCD0 /* SwiftUI_BestFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_BestFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE81FF42AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_BestFriendApp.swift; sourceTree = "<group>"; };
 		EDE81FF62AFE19B10099DCD0 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				EDE8202D2AFE3D9F0099DCD0 /* MessageView.swift */,
 				EDE8202F2AFE441E0099DCD0 /* SettingsView.swift */,
 				ED73B6F52AFE575000358C04 /* Settings.swift */,
+				ED73B6FD2AFE7A5500358C04 /* ApiServiceImage.swift */,
 			);
 			path = SwiftUI_BestFriend;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				ED73B6F82AFE766A00358C04 /* ImagePicker.swift in Sources */,
 				EDE820262AFE3C8D0099DCD0 /* Message.swift in Sources */,
 				EDE820212AFE1F8F0099DCD0 /* APIService.swift in Sources */,
+				ED73B6FE2AFE7A5500358C04 /* ApiServiceImage.swift in Sources */,
 				EDE81FF52AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
