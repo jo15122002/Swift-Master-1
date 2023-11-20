@@ -94,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED58E0C62B0B58320017F8F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDE81FF62AFE19B10099DCD0 /* ChatView.swift */,
+				EDE8202D2AFE3D9F0099DCD0 /* MessageView.swift */,
+				EDE8202F2AFE441E0099DCD0 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EDE81FE82AFE19B10099DCD0 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		EDE81FF32AFE19B10099DCD0 /* SwiftUI_BestFriend */ = {
 			isa = PBXGroup;
 			children = (
+				ED58E0C62B0B58320017F8F8 /* Views */,
 				ED73B6FF2AFE7EB000358C04 /* APIServiceImageAlban.swift */,
 				ED73B6F72AFE766A00358C04 /* ImagePicker.swift */,
 				EDE820272AFE3CB80099DCD0 /* Utilities.swift */,
@@ -125,12 +136,9 @@
 				EDE820222AFE2A090099DCD0 /* SwiftUI-BestFriend-Info.plist */,
 				EDE820202AFE1F8F0099DCD0 /* APIService.swift */,
 				EDE81FF42AFE19B10099DCD0 /* SwiftUI_BestFriendApp.swift */,
-				EDE81FF62AFE19B10099DCD0 /* ChatView.swift */,
 				EDE81FF82AFE19B20099DCD0 /* Assets.xcassets */,
 				EDE81FFA2AFE19B20099DCD0 /* Preview Content */,
 				EDE820292AFE3D650099DCD0 /* ChatObservable.swift */,
-				EDE8202D2AFE3D9F0099DCD0 /* MessageView.swift */,
-				EDE8202F2AFE441E0099DCD0 /* SettingsView.swift */,
 				ED73B6F52AFE575000358C04 /* Settings.swift */,
 				ED73B6FD2AFE7A5500358C04 /* ApiServiceImage.swift */,
 			);

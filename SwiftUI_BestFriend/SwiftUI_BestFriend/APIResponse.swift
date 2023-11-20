@@ -93,7 +93,7 @@ struct GenerationSettings: Codable {
 struct Timings: Codable {
     let predictedMS: Double
     let predictedN: Int
-    let predictedPerSecond, predictedPerTokenMS, promptMS: Double
+    let predictedPerSecond, predictedPerTokenMS, promptMS: Double?
     let promptN: Int
     let promptPerSecond, promptPerTokenMS: Double
 

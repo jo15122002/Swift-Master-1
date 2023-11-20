@@ -6,19 +6,34 @@
 //
 
 import Foundation
+import UIKit
 
 class ChatObservable:ObservableObject{
     private var apiService = APIService()
+    private var apiImageService = APIServiceImage()
     
     @Published var messageList = [Message]()
     
-    func sendChat(message:String){
-        
-        self.addMessage(message: Message(data: message.data(using: .utf8), dataType: .Text, userName: Settings.instance.username))
-        self.apiService.sendCompletionRequest(prompt: self.buildMessage(newMessage: message)) { content in
-            let formattedContent = content.replacingOccurrences(of: "\(Settings.instance.botname):", with: "")
-            self.addMessage(message: Message(data: formattedContent.data(using: .utf8), dataType: .Text, userName: Settings.instance.botname))
+    private var id = 0;
+    
+    func sendChat(message:String, image:UIImage){
+        if(image.size.width > 0){
+            self.id += 1
+            print("send image")
+            self.addMessage(message: Message(userName: Settings.instance.username, text: message, image:image))
+            let imageBase64 = image.pngData()?.base64EncodedString()
+            self.apiImageService.sendCompletionRequest(prompt: self.buildMessage(newMessage: message, hasImage: true), imageData: [["data" : imageBase64, "id":self.id]]) { content in
+                let formattedContent = content.replacingOccurrences(of: "\(Settings.instance.botname):", with: "")
+                self.addMessage(message: Message(userName: Settings.instance.botname, text: formattedContent))
+            }
+        }else{
+            self.addMessage(message: Message(userName: Settings.instance.username, text: message))
+            self.apiService.sendCompletionRequest(prompt: self.buildMessage(newMessage: message)) { content in
+                let formattedContent = content.replacingOccurrences(of: "\(Settings.instance.botname):", with: "")
+                self.addMessage(message: Message(userName: Settings.instance.botname, text: formattedContent))
+            }
         }
+        
     }
     
     func addMessage(message:Message){
@@ -27,14 +42,17 @@ class ChatObservable:ObservableObject{
         }
     }
     
-    func buildMessage(newMessage:String)->String{
-        var formattedPrompt = "\(Settings.instance.getFormattedContextPrompt())\n"
-        
-        messageList.forEach{message in
-            formattedPrompt += "\(message.userName): \(message.getText())\n"
+    func buildMessage(newMessage:String, hasImage:Bool = false)->String{
+        var formattedPrompt = ""
+        if(!hasImage){
+            formattedPrompt = "\(Settings.instance.getFormattedContextPrompt())\n"
+            
+            messageList.forEach{message in
+                formattedPrompt += "\(message.userName): \(message.text)\n"
+            }
         }
-        
-        formattedPrompt += "\(Settings.instance.username): \(newMessage)"
+        print(self.id)
+        formattedPrompt += "\(Settings.instance.username): \(hasImage ? "[img-\(self.id)] " : "") \(newMessage) \n ASSISTANT: "
         
         return formattedPrompt
     }

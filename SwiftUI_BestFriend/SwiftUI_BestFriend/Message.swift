@@ -10,34 +10,13 @@ import UIKit
 
 struct Message:ModelProtocol{
     var id = UUID().uuidString
-    
-    var data:Data?
-    var date:Date = Date.now
-    var dataType:DataType
-    var userName:String
-}
+    var userName: String
+    var text: String?
+    var image: UIImage? // Ajouter une propriété pour l'image
 
-extension Message {
-    func getText() -> String?{
-        if let d = data{
-            if(dataType == .Text){
-                return String(data: d, encoding: .utf8)
-            }
-        }
-        return nil
-    }
-    
-    func getImage() -> UIImage?{
-        if let d = data{
-            if(dataType == .Image){
-                return UIImage(data: d)
-            }
-        }
-        return nil
-    }
-    
-    static func defaultMessage()->Message{
-        return Message(data: "Un message super cool".data(using: .utf8), dataType: DataType.Text, userName: "Jojo")
+    static func defaultMessage() -> Message {
+        // Retourner un exemple de Message
+        return Message(userName: "Jojo", text: "Hello!", image: nil)
     }
 }
 

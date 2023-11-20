@@ -13,8 +13,8 @@ struct ChatView: View {
     @State var message = ""
     @State var showSettings = false
     @State var showImagePicker = false
-    
     @State var image:UIImage = UIImage()
+    
     var body: some View {
         VStack{
             List(self.$chatObservable.messageList){message in
@@ -32,8 +32,9 @@ struct ChatView: View {
                     }
                 TextField("Message to send…", text: $message)
                     .onSubmit {
-                        self.chatObservable.sendChat(message: message)
+                        self.chatObservable.sendChat(message: message, image: image)
                         self.message = ""
+                        self.image = UIImage()
                     }
                     .padding()
                 
