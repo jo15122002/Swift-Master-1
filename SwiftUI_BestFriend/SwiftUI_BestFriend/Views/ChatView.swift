@@ -21,6 +21,15 @@ struct ChatView: View {
                 MessageView(message: message.wrappedValue)
             }.padding()
             
+            if image.size.width > 0 {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 100)
+                    .onTapGesture {
+                        self.image = UIImage()
+                    }
+            }
             HStack{
                 Image("image")
                     .resizable()
