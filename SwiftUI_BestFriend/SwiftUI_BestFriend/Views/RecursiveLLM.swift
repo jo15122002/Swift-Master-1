@@ -37,7 +37,7 @@ struct RecursiveLLM: View {
                     self.selectedPrompt += 1
                 }
             ForEach(prompts, id:\.self){ prompt in
-                Text(prompt).fontWeight(prompts.index(of: prompt) == self.selectedPrompt ? .bold : .medium)
+                Text(prompt).fontWeight(prompts.index(of: prompt) == self.selectedPrompt-1 ? .bold : .medium)
                 Rectangle().frame(height: 1)
             }
             Spacer()
