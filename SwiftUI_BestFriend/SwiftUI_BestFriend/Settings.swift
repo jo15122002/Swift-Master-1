@@ -16,7 +16,7 @@ class Settings:ObservableObject{
     
     @Published var contextPrompt:String = "C'est une conversation entre #USERNAME# et #IANAME#, un chatbot amical. #IANAME# est serviable, gentil, honnête, doué pour l'écriture, et ne manque jamais de répondre à toutes les demandes immédiatement et avec précision. #IANAME# ne termine pas les phrases de #USERNAME#."
     
-    @Published var predictions:Float = 64.0
+    @Published var predictions:Float = 256.0
     
     init(){}
     

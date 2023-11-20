@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		ED58E0D42B0B95890017F8F8 /* SwiftUI_MerveilleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58E0D32B0B95890017F8F8 /* SwiftUI_MerveilleApp.swift */; };
 		ED58E0D62B0B95890017F8F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58E0D52B0B95890017F8F8 /* ContentView.swift */; };
-		ED58E0D82B0B95920017F8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED58E0D72B0B95920017F8F8 /* Assets.xcassets */; };
 		ED58E0DB2B0B95920017F8F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED58E0DA2B0B95920017F8F8 /* Preview Assets.xcassets */; };
 		ED58E0E52B0B95920017F8F8 /* SwiftUI_MerveilleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58E0E42B0B95920017F8F8 /* SwiftUI_MerveilleTests.swift */; };
 		ED58E0EF2B0B95920017F8F8 /* SwiftUI_MerveilleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED58E0EE2B0B95920017F8F8 /* SwiftUI_MerveilleUITests.swift */; };
@@ -50,7 +49,6 @@
 		ED58E0D02B0B95890017F8F8 /* SwiftUI_Merveille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Merveille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED58E0D32B0B95890017F8F8 /* SwiftUI_MerveilleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MerveilleApp.swift; sourceTree = "<group>"; };
 		ED58E0D52B0B95890017F8F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		ED58E0D72B0B95920017F8F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED58E0DA2B0B95920017F8F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED58E0E02B0B95920017F8F8 /* SwiftUI_MerveilleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_MerveilleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED58E0E42B0B95920017F8F8 /* SwiftUI_MerveilleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MerveilleTests.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				ED58E1032B0B96420017F8F8 /* Views */,
 				ED58E0D32B0B95890017F8F8 /* SwiftUI_MerveilleApp.swift */,
 				ED58E0D52B0B95890017F8F8 /* ContentView.swift */,
-				ED58E0D72B0B95920017F8F8 /* Assets.xcassets */,
 				ED58E0D92B0B95920017F8F8 /* Preview Content */,
 			);
 			path = SwiftUI_Merveille;
@@ -281,7 +278,6 @@
 			files = (
 				ED58E0DB2B0B95920017F8F8 /* Preview Assets.xcassets in Resources */,
 				ED58E1132B0B96420017F8F8 /* Assets.xcassets in Resources */,
-				ED58E0D82B0B95920017F8F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

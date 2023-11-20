@@ -22,11 +22,19 @@ struct RecursiveLLM: View {
         "Dis moi si #PROMPT# grammes de protéines est suffisant pour un homme adulte faisant du sport",
     ]
     
+    var contextPrompts:[String] = [
+        "Le modèle est un chef expérimenté qui connaît une grande variété de recettes de cuisine. Il est capable d'innover avec les ingrédients disponibles et de proposer des recettes uniques et réalisables. Le modèle prend en compte les combinaisons d'ingrédients et adapte les recettes en fonction de ce qui est donné comme ingrédients",
+        "Le modèle est compétent en nutrition et comprend comment calculer la teneur en macronutriments des aliments. Il analyse les ingrédients d'une recette et est capable de fournir une estimation précise de la teneur en protéines.",
+        "Le modèle possède des connaissances approfondies en diététique sportive et comprend les besoins nutritionnels d'un homme adulte pratiquant une activité physique. Il est capable d'évaluer si une quantité donnée de protéines est suffisante en se basant sur des directives nutritionnelles standard."
+    ]
+    
     var body: some View {
         VStack{
             TextField("Prompt de départ", text: $startPrompt)
                 .onSubmit {
-                    model.sendChat(message: startPrompt, image: UIImage())
+                    var prompt = prompts[selectedPrompt].replacingOccurrences(of: "#PROMPT#", with: startPrompt)
+                    model.sendChat(message: prompt, image: UIImage(), contextPrompt: contextPrompts[selectedPrompt])
+                    self.selectedPrompt += 1
                 }
             ForEach(prompts, id:\.self){ prompt in
                 Text(prompt).fontWeight(prompts.index(of: prompt) == self.selectedPrompt ? .bold : .medium)
@@ -40,9 +48,11 @@ struct RecursiveLLM: View {
         }.onChange(of: model.messageList, perform: { value in
             if let lastMessage = value.last,
                let receveivedText = lastMessage.text{
-                var prompt = prompts[selectedPrompt].replacingOccurrences(of: "#PROMPT#", with: receveivedText)
-                model.sendChat(message: prompt, image: UIImage())
-                self.selectedPrompt += 1
+                if(self.selectedPrompt < self.prompts.count){
+                    var prompt = prompts[selectedPrompt].replacingOccurrences(of: "#PROMPT#", with: receveivedText)
+                    model.sendChat(message: prompt, image: UIImage(), contextPrompt: contextPrompts[selectedPrompt])
+                    self.selectedPrompt += 1
+                }
             }
         })
     }
