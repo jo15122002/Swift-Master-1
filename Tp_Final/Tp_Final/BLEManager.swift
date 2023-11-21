@@ -15,7 +15,7 @@ class BLEManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     var centralManager: CBCentralManager!
     var discoveredPeripheral: CBPeripheral?
-    let serviceUUID = CBUUID(string: "7777")
+    let serviceUUID = CBUUID(string: "ee25b7b6-7798-4749-8b12-734cfbc5caa9")
     let characteristicUUID = CBUUID(string: "DDDD")
     var writableCharacteristic: CBCharacteristic?
     
@@ -43,7 +43,7 @@ class BLEManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     func scan(callback: @escaping (CBPeripheral,String) -> ()) {
         isScanning = true
         scanCallback = callback
-        centralManager.scanForPeripherals(withServices: [], options: nil)
+        centralManager.scanForPeripherals(withServices: [serviceUUID], options: nil)
     }
     
     func stopScan() {

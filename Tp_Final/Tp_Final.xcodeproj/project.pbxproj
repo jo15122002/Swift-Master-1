@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		ED5DF3D72B0CA22E0061B4A1 /* Tp_FinalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF3D62B0CA22E0061B4A1 /* Tp_FinalApp.swift */; };
-		ED5DF3D92B0CA22E0061B4A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF3D82B0CA22E0061B4A1 /* ContentView.swift */; };
 		ED5DF3DB2B0CA2300061B4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5DF3DA2B0CA2300061B4A1 /* Assets.xcassets */; };
 		ED5DF3DE2B0CA2300061B4A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5DF3DD2B0CA2300061B4A1 /* Preview Assets.xcassets */; };
 		ED5DF3E82B0CA2300061B4A1 /* Tp_FinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF3E72B0CA2300061B4A1 /* Tp_FinalTests.swift */; };
 		ED5DF3F22B0CA2300061B4A1 /* Tp_FinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF3F12B0CA2300061B4A1 /* Tp_FinalUITests.swift */; };
 		ED5DF3F42B0CA2300061B4A1 /* Tp_FinalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF3F32B0CA2300061B4A1 /* Tp_FinalUITestsLaunchTests.swift */; };
+		ED5DF4082B0CA2DC0061B4A1 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4012B0CA2DC0061B4A1 /* ConnectionView.swift */; };
+		ED5DF40B2B0CA2DC0061B4A1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4042B0CA2DC0061B4A1 /* ImagePicker.swift */; };
+		ED5DF4112B0CA4100061B4A1 /* PeripheralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4102B0CA4100061B4A1 /* PeripheralView.swift */; };
+		ED5DF4192B0CA6930061B4A1 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4132B0CA6930061B4A1 /* BLEManager.swift */; };
+		ED5DF41A2B0CA6930061B4A1 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4142B0CA6930061B4A1 /* Connection.swift */; };
+		ED5DF41B2B0CA6930061B4A1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4152B0CA6930061B4A1 /* Message.swift */; };
+		ED5DF41C2B0CA6930061B4A1 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4162B0CA6930061B4A1 /* Peripheral.swift */; };
+		ED5DF41D2B0CA6930061B4A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4172B0CA6930061B4A1 /* Utilities.swift */; };
+		ED5DF41E2B0CA6930061B4A1 /* DataBytesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4182B0CA6930061B4A1 /* DataBytesManager.swift */; };
+		ED5DF4202B0CACF30061B4A1 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF41F2B0CACF30061B4A1 /* SelectView.swift */; };
+		ED5DF4222B0CB2250061B4A1 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4212B0CB2250061B4A1 /* GraphView.swift */; };
+		ED5DF4242B0CB2370061B4A1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4232B0CB2370061B4A1 /* MapView.swift */; };
+		ED5DF4262B0CB2480061B4A1 /* ImageRecoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4252B0CB2480061B4A1 /* ImageRecoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +48,6 @@
 /* Begin PBXFileReference section */
 		ED5DF3D32B0CA22E0061B4A1 /* Tp_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tp_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5DF3D62B0CA22E0061B4A1 /* Tp_FinalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tp_FinalApp.swift; sourceTree = "<group>"; };
-		ED5DF3D82B0CA22E0061B4A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ED5DF3DA2B0CA2300061B4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED5DF3DD2B0CA2300061B4A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED5DF3E32B0CA2300061B4A1 /* Tp_FinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tp_FinalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +55,19 @@
 		ED5DF3ED2B0CA2300061B4A1 /* Tp_FinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tp_FinalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED5DF3F12B0CA2300061B4A1 /* Tp_FinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tp_FinalUITests.swift; sourceTree = "<group>"; };
 		ED5DF3F32B0CA2300061B4A1 /* Tp_FinalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tp_FinalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED5DF4012B0CA2DC0061B4A1 /* ConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+		ED5DF4042B0CA2DC0061B4A1 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		ED5DF4102B0CA4100061B4A1 /* PeripheralView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralView.swift; sourceTree = "<group>"; };
+		ED5DF4132B0CA6930061B4A1 /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		ED5DF4142B0CA6930061B4A1 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		ED5DF4152B0CA6930061B4A1 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		ED5DF4162B0CA6930061B4A1 /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peripheral.swift; sourceTree = "<group>"; };
+		ED5DF4172B0CA6930061B4A1 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		ED5DF4182B0CA6930061B4A1 /* DataBytesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBytesManager.swift; sourceTree = "<group>"; };
+		ED5DF41F2B0CACF30061B4A1 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
+		ED5DF4212B0CB2250061B4A1 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		ED5DF4232B0CB2370061B4A1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		ED5DF4252B0CB2480061B4A1 /* ImageRecoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +118,14 @@
 		ED5DF3D52B0CA22E0061B4A1 /* Tp_Final */ = {
 			isa = PBXGroup;
 			children = (
+				ED5DF4122B0CA42B0061B4A1 /* Views */,
+				ED5DF4132B0CA6930061B4A1 /* BLEManager.swift */,
+				ED5DF4142B0CA6930061B4A1 /* Connection.swift */,
+				ED5DF4182B0CA6930061B4A1 /* DataBytesManager.swift */,
+				ED5DF4152B0CA6930061B4A1 /* Message.swift */,
+				ED5DF4162B0CA6930061B4A1 /* Peripheral.swift */,
+				ED5DF4172B0CA6930061B4A1 /* Utilities.swift */,
 				ED5DF3D62B0CA22E0061B4A1 /* Tp_FinalApp.swift */,
-				ED5DF3D82B0CA22E0061B4A1 /* ContentView.swift */,
 				ED5DF3DA2B0CA2300061B4A1 /* Assets.xcassets */,
 				ED5DF3DC2B0CA2300061B4A1 /* Preview Content */,
 			);
@@ -125,6 +155,20 @@
 				ED5DF3F32B0CA2300061B4A1 /* Tp_FinalUITestsLaunchTests.swift */,
 			);
 			path = Tp_FinalUITests;
+			sourceTree = "<group>";
+		};
+		ED5DF4122B0CA42B0061B4A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED5DF4102B0CA4100061B4A1 /* PeripheralView.swift */,
+				ED5DF4012B0CA2DC0061B4A1 /* ConnectionView.swift */,
+				ED5DF4042B0CA2DC0061B4A1 /* ImagePicker.swift */,
+				ED5DF41F2B0CACF30061B4A1 /* SelectView.swift */,
+				ED5DF4212B0CB2250061B4A1 /* GraphView.swift */,
+				ED5DF4232B0CB2370061B4A1 /* MapView.swift */,
+				ED5DF4252B0CB2480061B4A1 /* ImageRecoView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +301,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED5DF3D92B0CA22E0061B4A1 /* ContentView.swift in Sources */,
+				ED5DF4202B0CACF30061B4A1 /* SelectView.swift in Sources */,
+				ED5DF41C2B0CA6930061B4A1 /* Peripheral.swift in Sources */,
+				ED5DF41D2B0CA6930061B4A1 /* Utilities.swift in Sources */,
+				ED5DF40B2B0CA2DC0061B4A1 /* ImagePicker.swift in Sources */,
+				ED5DF4242B0CB2370061B4A1 /* MapView.swift in Sources */,
+				ED5DF4192B0CA6930061B4A1 /* BLEManager.swift in Sources */,
+				ED5DF4082B0CA2DC0061B4A1 /* ConnectionView.swift in Sources */,
+				ED5DF4262B0CB2480061B4A1 /* ImageRecoView.swift in Sources */,
+				ED5DF41A2B0CA6930061B4A1 /* Connection.swift in Sources */,
+				ED5DF41B2B0CA6930061B4A1 /* Message.swift in Sources */,
+				ED5DF41E2B0CA6930061B4A1 /* DataBytesManager.swift in Sources */,
+				ED5DF4112B0CA4100061B4A1 /* PeripheralView.swift in Sources */,
 				ED5DF3D72B0CA22E0061B4A1 /* Tp_FinalApp.swift in Sources */,
+				ED5DF4222B0CB2250061B4A1 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +481,8 @@
 				DEVELOPMENT_TEAM = 5X6JDKHZC6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = yes;
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "periph ble";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +512,8 @@
 				DEVELOPMENT_TEAM = 5X6JDKHZC6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = yes;
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "periph ble";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
