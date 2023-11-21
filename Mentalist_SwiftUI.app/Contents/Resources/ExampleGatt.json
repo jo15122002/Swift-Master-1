@@ -1,0 +1,33 @@
+{
+    "peripheralName": "BLEServer",
+    "Services": [
+        {
+            "name" : "Service",
+            "uuid" : "EE25B7B6-7798-4749-8B12-734CFBC5CAA9",
+            "isPrimary" : true,
+            "characteristics": [
+                {
+                    "name" : "Accelero",
+                    "uuid" : "6E400002-B5A3-F393-E0A9-E50E24DCCA9E",
+                    "properties" : [2,8,16
+                    ],
+                    "permissions": [1,2]
+                },
+                {
+                    "name" : "Villes",
+                    "uuid" : "558759EE-0F86-49E7-A38A-DBE48CF8B237",
+                    "properties" : [2,8,16
+                    ],
+                    "permissions": [1,2]
+                },
+                {
+                    "name" : "Image",
+                    "uuid" : "FA083A03-B3DD-4529-880B-FF430B85E410",
+                    "properties" : [2,8,16
+                    ],
+                    "permissions": [1,2]
+                },
+            ]
+        }
+    ]
+}
