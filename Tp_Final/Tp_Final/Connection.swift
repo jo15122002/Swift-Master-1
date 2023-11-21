@@ -20,6 +20,10 @@ class Connection:ObservableObject{
     @Published var citiesPins:[MapAnnotationItem] = [MapAnnotationItem]()
     private var nbDataReceived = 0
     
+    static var instance = Connection()
+    
+    var connectedPeriph:Peripheral?
+    
     func addPeripheral(periph:Peripheral){
         if(!periphList.contains(periph)){
             self.periphList.append(periph)
@@ -41,9 +45,16 @@ class Connection:ObservableObject{
     func connectToPeripheral(periph:Peripheral){
         if let cbperiph = periph.cbPeriph{
             BLEManager.instance.connectPeripheral(cbperiph) { connectedPeriph in
-                
                 self.stopScan()
                 self.isConnected = true
+            }
+        }
+    }
+    
+    func disconnectFromPeripheral(){
+        if let cbPeriph = connectedPeriph?.cbPeriph{
+            BLEManager.instance.disconnectPeripheral(cbPeriph){_ in
+                self.isConnected = false
             }
         }
     }
@@ -58,6 +69,12 @@ class Connection:ObservableObject{
         if let data = image.pngData(){
             BLEManager.instance.sendData(data: data)
         }
+    }
+    
+    func switchCharacteristic(characteristic:String){
+        self.disconnectFromPeripheral()
+        BLEManager.instance.setCharacteristicUUID(uuid: characteristic)
+        self.connectToPeripheral(periph: self.connectedPeriph!)
     }
     
     func listenForMessage(){

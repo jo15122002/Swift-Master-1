@@ -10,7 +10,7 @@ import Charts
 
 struct GraphView: View {
     var bleManager = BLEManager.instance
-    @ObservedObject var connection:Connection = Connection()
+    @ObservedObject var connection:Connection = Connection.instance
     var body: some View {
         VStack{
             Chart(connection.axisArray){axis in
@@ -22,7 +22,7 @@ struct GraphView: View {
             Text("Start")
                 .onTapGesture {
                     print("tap")
-                    bleManager.setCharacteristicUUID(uuid: "6E400002-B5A3-F393-E0A9-E50E24DCCA9E")
+                    connection.switchCharacteristic(characteristic: "6E400002-B5A3-F393-E0A9-E50E24DCCA9E")
                     connection.listenForMessage()
                 }
         }

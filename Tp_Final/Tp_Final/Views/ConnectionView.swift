@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ConnectionView: View {
     
-    @ObservedObject var model:Connection = Connection()
+    @ObservedObject var model:Connection = Connection.instance
     
     @State var message:String = "";
     @State private var image = UIImage()
@@ -37,6 +37,7 @@ struct ConnectionView: View {
                     PeripheralView(model: periph)
                         .onTapGesture {
                             model.connectToPeripheral(periph: periph.wrappedValue)
+                            model.connectedPeriph = periph.wrappedValue
                         }
                 }
                 
