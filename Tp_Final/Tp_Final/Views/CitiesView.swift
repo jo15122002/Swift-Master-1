@@ -22,8 +22,9 @@ struct CitiesView: View {
                 }
             }
             Text("Start").onTapGesture {
-                connection.switchCharacteristic(characteristic: "558759EE-0F86-49E7-A38A-DBE48CF8B237")
-                connection.listenForMessage()
+                connection.switchCharacteristic(characteristic: "558759EE-0F86-49E7-A38A-DBE48CF8B237"){
+                    connection.listenForMessage()
+                }
             }
         }
     }

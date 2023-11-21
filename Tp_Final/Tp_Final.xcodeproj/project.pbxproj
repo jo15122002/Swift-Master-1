@@ -27,6 +27,11 @@
 		ED5DF4242B0CB2370061B4A1 /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4232B0CB2370061B4A1 /* CitiesView.swift */; };
 		ED5DF4262B0CB2480061B4A1 /* ImageRecoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4252B0CB2480061B4A1 /* ImageRecoView.swift */; };
 		ED5DF4282B0CD6980061B4A1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4272B0CD6980061B4A1 /* MapView.swift */; };
+		ED5DF4302B0CE37D0061B4A1 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF42A2B0CE37D0061B4A1 /* MobileNet.mlmodel */; };
+		ED5DF4312B0CE37D0061B4A1 /* ImageRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF42B2B0CE37D0061B4A1 /* ImageRecognition.swift */; };
+		ED5DF4322B0CE37D0061B4A1 /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF42D2B0CE37D0061B4A1 /* VNClassificationObservation+confidenceString.swift */; };
+		ED5DF4332B0CE37D0061B4A1 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF42E2B0CE37D0061B4A1 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		ED5DF4342B0CE37D0061B4A1 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF42F2B0CE37D0061B4A1 /* ImagePredictor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		ED5DF4232B0CB2370061B4A1 /* CitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesView.swift; sourceTree = "<group>"; };
 		ED5DF4252B0CB2480061B4A1 /* ImageRecoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecoView.swift; sourceTree = "<group>"; };
 		ED5DF4272B0CD6980061B4A1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		ED5DF42A2B0CE37D0061B4A1 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		ED5DF42B2B0CE37D0061B4A1 /* ImageRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRecognition.swift; sourceTree = "<group>"; };
+		ED5DF42D2B0CE37D0061B4A1 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
+		ED5DF42E2B0CE37D0061B4A1 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		ED5DF42F2B0CE37D0061B4A1 /* ImagePredictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,7 @@
 		ED5DF3D52B0CA22E0061B4A1 /* Tp_Final */ = {
 			isa = PBXGroup;
 			children = (
+				ED5DF4292B0CE37D0061B4A1 /* imageRecognition */,
 				ED5DF4122B0CA42B0061B4A1 /* Views */,
 				ED5DF4132B0CA6930061B4A1 /* BLEManager.swift */,
 				ED5DF4142B0CA6930061B4A1 /* Connection.swift */,
@@ -172,6 +183,26 @@
 				ED5DF4272B0CD6980061B4A1 /* MapView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		ED5DF4292B0CE37D0061B4A1 /* imageRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				ED5DF42A2B0CE37D0061B4A1 /* MobileNet.mlmodel */,
+				ED5DF42B2B0CE37D0061B4A1 /* ImageRecognition.swift */,
+				ED5DF42C2B0CE37D0061B4A1 /* Extensions */,
+				ED5DF42F2B0CE37D0061B4A1 /* ImagePredictor.swift */,
+			);
+			path = imageRecognition;
+			sourceTree = "<group>";
+		};
+		ED5DF42C2B0CE37D0061B4A1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED5DF42D2B0CE37D0061B4A1 /* VNClassificationObservation+confidenceString.swift */,
+				ED5DF42E2B0CE37D0061B4A1 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,13 +338,18 @@
 				ED5DF4202B0CACF30061B4A1 /* SelectView.swift in Sources */,
 				ED5DF41C2B0CA6930061B4A1 /* Peripheral.swift in Sources */,
 				ED5DF41D2B0CA6930061B4A1 /* Utilities.swift in Sources */,
+				ED5DF4312B0CE37D0061B4A1 /* ImageRecognition.swift in Sources */,
 				ED5DF40B2B0CA2DC0061B4A1 /* ImagePicker.swift in Sources */,
 				ED5DF4242B0CB2370061B4A1 /* CitiesView.swift in Sources */,
 				ED5DF4192B0CA6930061B4A1 /* BLEManager.swift in Sources */,
 				ED5DF4082B0CA2DC0061B4A1 /* ConnectionView.swift in Sources */,
+				ED5DF4332B0CE37D0061B4A1 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				ED5DF4282B0CD6980061B4A1 /* MapView.swift in Sources */,
+				ED5DF4302B0CE37D0061B4A1 /* MobileNet.mlmodel in Sources */,
 				ED5DF4262B0CB2480061B4A1 /* ImageRecoView.swift in Sources */,
+				ED5DF4322B0CE37D0061B4A1 /* VNClassificationObservation+confidenceString.swift in Sources */,
 				ED5DF41A2B0CA6930061B4A1 /* Connection.swift in Sources */,
+				ED5DF4342B0CE37D0061B4A1 /* ImagePredictor.swift in Sources */,
 				ED5DF41B2B0CA6930061B4A1 /* Message.swift in Sources */,
 				ED5DF41E2B0CA6930061B4A1 /* DataBytesManager.swift in Sources */,
 				ED5DF4112B0CA4100061B4A1 /* PeripheralView.swift in Sources */,

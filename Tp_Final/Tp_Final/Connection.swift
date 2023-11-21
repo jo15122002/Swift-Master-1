@@ -42,11 +42,12 @@ class Connection:ObservableObject{
         self.isScanning = false
     }
     
-    func connectToPeripheral(periph:Peripheral){
+    func connectToPeripheral(periph:Peripheral, callback:@escaping (()->())){
         if let cbperiph = periph.cbPeriph{
             BLEManager.instance.connectPeripheral(cbperiph) { connectedPeriph in
                 self.stopScan()
                 self.isConnected = true
+                callback()
             }
         }
     }
@@ -71,10 +72,13 @@ class Connection:ObservableObject{
         }
     }
     
-    func switchCharacteristic(characteristic:String){
+    func switchCharacteristic(characteristic:String, callback: @escaping (()->())){
         self.disconnectFromPeripheral()
         BLEManager.instance.setCharacteristicUUID(uuid: characteristic)
-        self.connectToPeripheral(periph: self.connectedPeriph!)
+        self.connectToPeripheral(periph: self.connectedPeriph!){
+            print("callback switch")
+            callback()
+        }
     }
     
     func listenForMessage(){

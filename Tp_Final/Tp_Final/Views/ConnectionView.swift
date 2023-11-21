@@ -36,7 +36,7 @@ struct ConnectionView: View {
                 List(self.$model.periphList){ periph in
                     PeripheralView(model: periph)
                         .onTapGesture {
-                            model.connectToPeripheral(periph: periph.wrappedValue)
+                            model.connectToPeripheral(periph: periph.wrappedValue){}
                             model.connectedPeriph = periph.wrappedValue
                         }
                 }
