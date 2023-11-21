@@ -12,15 +12,21 @@ struct CitiesView: View {
     var body: some View {
         VStack{
             Text("Map")
-            Spacer()
             MapView(annotations: connection.citiesPins)
             ScrollView(.horizontal){
                 HStack{
                     ForEach(connection.citiesReceived){city in
                         Text(city.name)
+                            .onTapGesture {
+                                print("tap on city")
+                                self.connection.askMistral(city: city.name)
+                            }
+                            .padding()
+                            .background(.gray)
                     }
                 }
             }
+            Text(self.connection.mistralresponse)
             Text("Start").onTapGesture {
                 connection.switchCharacteristic(characteristic: "558759EE-0F86-49E7-A38A-DBE48CF8B237"){
                     connection.listenForMessage()

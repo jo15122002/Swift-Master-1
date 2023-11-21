@@ -24,10 +24,30 @@ class Connection:ObservableObject{
     
     var connectedPeriph:Peripheral?
     
+    @Published var mistralresponse:String = ""
+    private var apiService = APIService()
+    
     func addPeripheral(periph:Peripheral){
         if(!periphList.contains(periph)){
             self.periphList.append(periph)
         }
+    }
+    
+    func askMistral(city:String){
+        var prompt = self.buildMessage(newMessage: "Donne moi des informations à propos de " + city)
+        self.apiService.sendCompletionRequest(prompt: prompt) { response in
+            print("mistral responded")
+            self.mistralresponse = response
+        }
+    }
+    
+    func buildMessage(newMessage:String, hasImage:Bool = false, contextPrompt:String = "")->String{
+        var formattedPrompt = ""
+        formattedPrompt = contextPrompt.isEmpty ? "\(Settings.instance.getFormattedContextPrompt())\n" : contextPrompt+"\n"
+
+        formattedPrompt += "\(Settings.instance.username): \(newMessage) \n \(Settings.instance.botname): "
+        
+        return formattedPrompt
     }
     
     func startScan(){
