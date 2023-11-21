@@ -48,17 +48,13 @@ class Connection:ObservableObject{
     
     func sendData(message:String){
         if let stringData = message.data(using: .utf8){
-            let data = DataBytesManager.instance.appendPrefix(userId: 0x06, dataType: DataType.Text.rawValue, to: stringData)
-            BLEManager.instance.sendData(data: data)
+            BLEManager.instance.sendData(data: stringData)
         }
     }
     
     func sendData(image:UIImage){
         if let data = image.pngData(){
-            let data = DataBytesManager.instance.appendPrefix(userId: 0x06, dataType: DataType.Image.rawValue, to: data)
-            print("test")
             BLEManager.instance.sendData(data: data)
-            print("test2")
         }
     }
     
@@ -68,12 +64,16 @@ class Connection:ObservableObject{
             if let d = data{
                 print(d)
                 if let convertedData = DataBytesManager.instance.convertData(data: d){
-                    if let doubleValue = convertedData as? Double{
-                        let axisNames = ["x", "y", "z"]
-                        let axis = Axis(axis: axisNames[self.nbDataReceived%3], value: doubleValue, index: self.nbDataReceived/3)
-                        self.axisArray.append(axis)
-                        print("nouveau double")
-                        self.nbDataReceived += 1
+                    if let doubleValue = convertedData as? Double{ //alors ça vient de l'accelero
+                        if(self.nbDataReceived < 30){
+                            let axisNames = ["x", "y", "z"]
+                            let axis = Axis(axis: axisNames[self.nbDataReceived%3], value: doubleValue, index: self.nbDataReceived/3)
+                            self.axisArray.append(axis)
+                            print("nouveau double")
+                            self.nbDataReceived += 1
+                        }else{
+                            self.sendData(message: "stopAccelero")
+                        }
                     }
                     
                     if let stringValue = convertedData as? String{
