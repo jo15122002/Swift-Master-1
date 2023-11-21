@@ -10,7 +10,7 @@ import Charts
 
 struct GraphView: View {
     var bleManager = BLEManager.instance
-    @ObservedObject var connection = Connection()
+    @ObservedObject var connection:Connection = Connection()
     var body: some View {
         VStack{
             Chart(connection.axisArray){axis in

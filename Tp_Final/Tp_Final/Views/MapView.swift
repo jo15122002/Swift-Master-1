@@ -6,13 +6,42 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct MapView: View {
-    var body: some View {
-        Text("Map")
+struct MapView: UIViewRepresentable {
+    var annotations: [MapAnnotationItem]
+
+    func makeUIView(context: Context) -> MKMapView {
+        return MKMapView()
+    }
+
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+        updateAnnotations(for: uiView)
+    }
+
+    private func updateAnnotations(for mapView: MKMapView) {
+        mapView.removeAnnotations(mapView.annotations)
+        
+        let newAnnotations = annotations.map { item -> MKPointAnnotation in
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = item.coordinate
+            annotation.title = item.title
+            return annotation
+        }
+        
+        mapView.addAnnotations(newAnnotations)
+        if let firstAnnotation = newAnnotations.first {
+            mapView.setCenter(firstAnnotation.coordinate, animated: true)
+        }
     }
 }
 
+
 #Preview {
-    MapView()
+    MapView(annotations: [])
+}
+
+struct MapAnnotationItem {
+    let coordinate: CLLocationCoordinate2D
+    let title: String?
 }

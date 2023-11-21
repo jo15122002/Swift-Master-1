@@ -16,7 +16,7 @@ class BLEManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     var centralManager: CBCentralManager!
     var discoveredPeripheral: CBPeripheral?
     let serviceUUID = CBUUID(string: "ee25b7b6-7798-4749-8b12-734cfbc5caa9")
-    var characteristicUUID = CBUUID(string: "6E400002-B5A3-F393-E0A9-E50E24DCCA9E")
+    var characteristicUUID = CBUUID(string: "558759EE-0F86-49E7-A38A-DBE48CF8B237")
     var writableCharacteristic: CBCharacteristic?
     
     var scanCallback: ((CBPeripheral,String) -> ())?

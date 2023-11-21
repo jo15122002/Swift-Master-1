@@ -13,10 +13,12 @@ class DataBytesManager{
     
     func convertData(data:Data) -> Any?{
         if let doubleValue = Double(String(data: data, encoding: .utf8) ?? "") {
+            print("DoubleValue")
             return doubleValue
         }
         
         if let stringValue = String(data: data, encoding: .utf8) {
+            print("StringValue")
                 return stringValue
             }
 

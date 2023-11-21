@@ -24,8 +24,9 @@
 		ED5DF41E2B0CA6930061B4A1 /* DataBytesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4182B0CA6930061B4A1 /* DataBytesManager.swift */; };
 		ED5DF4202B0CACF30061B4A1 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF41F2B0CACF30061B4A1 /* SelectView.swift */; };
 		ED5DF4222B0CB2250061B4A1 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4212B0CB2250061B4A1 /* GraphView.swift */; };
-		ED5DF4242B0CB2370061B4A1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4232B0CB2370061B4A1 /* MapView.swift */; };
+		ED5DF4242B0CB2370061B4A1 /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4232B0CB2370061B4A1 /* CitiesView.swift */; };
 		ED5DF4262B0CB2480061B4A1 /* ImageRecoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4252B0CB2480061B4A1 /* ImageRecoView.swift */; };
+		ED5DF4282B0CD6980061B4A1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5DF4272B0CD6980061B4A1 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +67,9 @@
 		ED5DF4182B0CA6930061B4A1 /* DataBytesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBytesManager.swift; sourceTree = "<group>"; };
 		ED5DF41F2B0CACF30061B4A1 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		ED5DF4212B0CB2250061B4A1 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
-		ED5DF4232B0CB2370061B4A1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		ED5DF4232B0CB2370061B4A1 /* CitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesView.swift; sourceTree = "<group>"; };
 		ED5DF4252B0CB2480061B4A1 /* ImageRecoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecoView.swift; sourceTree = "<group>"; };
+		ED5DF4272B0CD6980061B4A1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,8 +167,9 @@
 				ED5DF4042B0CA2DC0061B4A1 /* ImagePicker.swift */,
 				ED5DF41F2B0CACF30061B4A1 /* SelectView.swift */,
 				ED5DF4212B0CB2250061B4A1 /* GraphView.swift */,
-				ED5DF4232B0CB2370061B4A1 /* MapView.swift */,
+				ED5DF4232B0CB2370061B4A1 /* CitiesView.swift */,
 				ED5DF4252B0CB2480061B4A1 /* ImageRecoView.swift */,
+				ED5DF4272B0CD6980061B4A1 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,9 +308,10 @@
 				ED5DF41C2B0CA6930061B4A1 /* Peripheral.swift in Sources */,
 				ED5DF41D2B0CA6930061B4A1 /* Utilities.swift in Sources */,
 				ED5DF40B2B0CA2DC0061B4A1 /* ImagePicker.swift in Sources */,
-				ED5DF4242B0CB2370061B4A1 /* MapView.swift in Sources */,
+				ED5DF4242B0CB2370061B4A1 /* CitiesView.swift in Sources */,
 				ED5DF4192B0CA6930061B4A1 /* BLEManager.swift in Sources */,
 				ED5DF4082B0CA2DC0061B4A1 /* ConnectionView.swift in Sources */,
+				ED5DF4282B0CD6980061B4A1 /* MapView.swift in Sources */,
 				ED5DF4262B0CB2480061B4A1 /* ImageRecoView.swift in Sources */,
 				ED5DF41A2B0CA6930061B4A1 /* Connection.swift in Sources */,
 				ED5DF41B2B0CA6930061B4A1 /* Message.swift in Sources */,

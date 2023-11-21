@@ -15,7 +15,7 @@ struct SelectView: View {
                         Label("Graph", systemImage: "chart.xyaxis.line")
                     }
                 
-            MapView()
+            CitiesView()
                 .tabItem {
                     Label("Carte", systemImage: "map")
                 }

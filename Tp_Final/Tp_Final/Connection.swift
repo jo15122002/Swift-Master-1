@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class Connection:ObservableObject{
     @Published var periphList = [Peripheral]()
@@ -15,7 +16,8 @@ class Connection:ObservableObject{
     @Published var messagesReceived = [Message]()
     
     @Published var axisArray:[Axis] = [Axis]()
-    @Published var stringReceived:[String] = [String]()
+    @Published var citiesReceived:[City] = [City]()
+    @Published var citiesPins:[MapAnnotationItem] = [MapAnnotationItem]()
     private var nbDataReceived = 0
     
     func addPeripheral(periph:Peripheral){
@@ -77,11 +79,33 @@ class Connection:ObservableObject{
                     }
                     
                     if let stringValue = convertedData as? String{
-                        self.stringReceived.append(stringValue)
-                        print("nouveau string")
+                        if(self.citiesReceived.count < 7){
+                            let city = City(name: stringValue)
+                            if(!self.citiesReceived.contains(city)){
+                                self.citiesReceived.insert(City(name: stringValue), at: 0)
+                                self.geocodeCityName(cityName: stringValue)
+                            }
+                            print("nouveau string")
+                        }else{
+                            self.sendData(message: "stopCities")
+                        }
                     }
                 }
             }
         }
     }
+    
+    func geocodeCityName(cityName: String) {
+            let geocoder = CLGeocoder()
+            
+            geocoder.geocodeAddressString(cityName) { (placemarks, error) in
+                guard let location = placemarks?.first?.location else {
+                    print("Erreur de géocodage: \(error?.localizedDescription ?? "Erreur inconnue")")
+                    return
+                }
+                
+                let annotation = MapAnnotationItem(coordinate: location.coordinate, title: cityName)
+                self.citiesPins.insert(annotation, at: 0)
+            }
+        }
 }
