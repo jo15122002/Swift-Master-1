@@ -29,19 +29,16 @@ class DataBytesManager{
         return Data(bytes: bytes)
     }
     
-    func convertToData(data:Data)->(username:String, dataType:DataType, data:Data)?{
-        var bytes = [UInt8](data)
-        if let userIdBytes = bytes.first{
-            bytes = Array(bytes.dropFirst())
-            if let name = names[userIdBytes]{
-                if let dataTypeByte = bytes.first{
-                    bytes = Array(bytes.dropFirst())
-                    if let type = DataType(rawValue: dataTypeByte){
-                        return (name, type, Data(bytes))
-                    }
-                }
-            }
+    func convertData(data:Data) -> Any?{
+        if let doubleValue = Double(String(data: data, encoding: .utf8) ?? "") {
+            return doubleValue
         }
+        
+        if let stringValue = String(data: data, encoding: .utf8) {
+                return stringValue
+            }
+
+        // Si les deux conversions échouent, renvoyez nil ou gérez l'erreur
         return nil
     }
 }

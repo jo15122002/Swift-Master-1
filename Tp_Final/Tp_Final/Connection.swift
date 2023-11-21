@@ -14,6 +14,10 @@ class Connection:ObservableObject{
     @Published var isConnected = false
     @Published var messagesReceived = [Message]()
     
+    @Published var axisArray:[Axis] = [Axis]()
+    @Published var stringReceived:[String] = [String]()
+    private var nbDataReceived = 0
+    
     func addPeripheral(periph:Peripheral){
         if(!periphList.contains(periph)){
             self.periphList.append(periph)
@@ -60,10 +64,22 @@ class Connection:ObservableObject{
     
     func listenForMessage(){
         BLEManager.instance.listenForMessages { data in
+            print("message")
             if let d = data{
-                if let infos = DataBytesManager.instance.convertToData(data: d){
-                    let message = Message(data: infos.data, dataType: infos.dataType, userName: infos.username)
-                    self.messagesReceived.append(message)
+                print(d)
+                if let convertedData = DataBytesManager.instance.convertData(data: d){
+                    if let doubleValue = convertedData as? Double{
+                        let axisNames = ["x", "y", "z"]
+                        let axis = Axis(axis: axisNames[self.nbDataReceived%3], value: doubleValue, index: self.nbDataReceived/3)
+                        self.axisArray.append(axis)
+                        print("nouveau double")
+                        self.nbDataReceived += 1
+                    }
+                    
+                    if let stringValue = convertedData as? String{
+                        self.stringReceived.append(stringValue)
+                        print("nouveau string")
+                    }
                 }
             }
         }

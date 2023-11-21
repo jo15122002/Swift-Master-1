@@ -15,8 +15,6 @@ struct ConnectionView: View {
     @State private var image = UIImage()
     @State private var showSheet = false
     
-    @State private var debugShowSheet = false
-    
     var body: some View {
         
             VStack {
@@ -40,9 +38,6 @@ struct ConnectionView: View {
                         .onTapGesture {
                             model.connectToPeripheral(periph: periph.wrappedValue)
                         }
-                }
-                Text("debug showsheet").onTapGesture {
-                    self.debugShowSheet = true
                 }
                 
             }

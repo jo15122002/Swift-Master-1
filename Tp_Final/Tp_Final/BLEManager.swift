@@ -16,7 +16,7 @@ class BLEManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     var centralManager: CBCentralManager!
     var discoveredPeripheral: CBPeripheral?
     let serviceUUID = CBUUID(string: "ee25b7b6-7798-4749-8b12-734cfbc5caa9")
-    let characteristicUUID = CBUUID(string: "DDDD")
+    var characteristicUUID = CBUUID(string: "6E400002-B5A3-F393-E0A9-E50E24DCCA9E")
     var writableCharacteristic: CBCharacteristic?
     
     var scanCallback: ((CBPeripheral,String) -> ())?
@@ -29,6 +29,10 @@ class BLEManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     override init() {
         super.init()
         centralManager = CBCentralManager(delegate: self, queue: nil)
+    }
+    
+    func setCharacteristicUUID(uuid:String){
+        self.characteristicUUID = CBUUID(string: uuid)
     }
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -70,6 +74,7 @@ class BLEManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     }
     
     func listenForMessages(callback:@escaping(Data?)->()) {
+        print(self.characteristicUUID)
         messageReceivedCallback = callback
     }
     
